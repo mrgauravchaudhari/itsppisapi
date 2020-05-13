@@ -3,14 +3,14 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
-using cfclapi.Data;
-using cfclapi.Dtos;
-using cfclapi.Models;
+using itsppisapi.Data;
+using itsppisapi.Dtos;
+using itsppisapi.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 
-namespace cfclapi.Controllers
+namespace itsppisapi.Controllers
 {
   [Route("api/[controller]")]
   [ApiController]

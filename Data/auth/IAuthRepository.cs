@@ -1,7 +1,7 @@
-using cfclapi.Models;
+using itsppisapi.Models;
 using System.Threading.Tasks;
 
-namespace cfclapi.Data
+namespace itsppisapi.Data
 {
     public interface IAuthRepository
     {

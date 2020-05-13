@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace cfclapi.Models
+namespace itsppisapi.Models
 {
     public class UserMasterModel
     {

@@ -1,4 +1,4 @@
-namespace cfclapi.Models
+namespace itsppisapi.Models
 {
   public class ModuleMasterModel
   {

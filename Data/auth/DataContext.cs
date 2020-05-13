@@ -1,7 +1,7 @@
-using cfclapi.Models;
+using itsppisapi.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace cfclapi.Models
+namespace itsppisapi.Models
 {
     public class DataContext : DbContext
     {

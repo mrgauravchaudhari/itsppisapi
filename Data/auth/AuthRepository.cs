@@ -1,9 +1,9 @@
 using System;
 using System.Threading.Tasks;
-using cfclapi.Models;
+using itsppisapi.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace cfclapi.Data
+namespace itsppisapi.Data
 {
     public class AuthRepository : IAuthRepository
     {

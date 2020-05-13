@@ -1,12 +1,12 @@
 using Microsoft.Extensions.Configuration;
-using cfclapi.Models;
+using itsppisapi.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace cfclapi.Data
+namespace itsppisapi.Data
 {
     public class PLS001Repository
     {
@@ -57,7 +57,7 @@ namespace cfclapi.Data
         {
             using (SqlConnection sql = new SqlConnection(_connectionString))
             {
-                using (SqlCommand cmd = new SqlCommand("select DEPT_CODE,DEPT_NAME from [CFCL8FULL].[PPIS].[PPM_GL_DEPARTMENT]", sql))
+                using (SqlCommand cmd = new SqlCommand("select DEPT_CODE,DEPT_NAME from [itsppis8FULL].[PPIS].[PPM_GL_DEPARTMENT]", sql))
                 {
                     var response = new List<PLS001Model>();
                     await sql.OpenAsync();

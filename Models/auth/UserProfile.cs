@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace cfclapi.Models
+namespace itsppisapi.Models
 {
   [Table("PPM_GL_MST_USERS", Schema = "PPIS")]
   public class UserProfile

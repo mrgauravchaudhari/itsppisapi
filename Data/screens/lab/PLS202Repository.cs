@@ -1,9 +1,9 @@
 using Microsoft.Extensions.Configuration;
-using cfclapi.Models;
+using itsppisapi.Models;
 using System.Data.SqlClient;
 using System.Threading.Tasks;
 
-namespace cfclapi.Data
+namespace itsppisapi.Data
 {
   public class PLS202Repository
   {

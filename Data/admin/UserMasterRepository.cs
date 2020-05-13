@@ -1,13 +1,13 @@
 using Microsoft.Extensions.Configuration;
-using cfclapi.Models;
+using itsppisapi.Models;
 using System.Data.SqlClient;
 using System.Threading.Tasks;
-using cfclapi.Dtos;
+using itsppisapi.Dtos;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 
-namespace cfclapi.Data
+namespace itsppisapi.Data
 {
     public class UserMasterRepository
     {

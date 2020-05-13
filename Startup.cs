@@ -6,17 +6,17 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json.Serialization;
-using cfclapi.Data;
-using cfclapi.Models;
+using itsppisapi.Data;
+using itsppisapi.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using System.Net;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Http;
-using cfclapi.Helpers;
+using itsppisapi.Helpers;
 
-namespace cfclapi
+namespace itsppisapi
 {
   public class Startup
   {

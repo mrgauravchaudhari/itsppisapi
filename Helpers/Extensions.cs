@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Http;
 
-namespace cfclapi.Helpers
+namespace itsppisapi.Helpers
 {
     public static class Extensions
     {

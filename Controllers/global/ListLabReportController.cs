@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using System.Data;
 
-namespace cfclapi.Controllers.global
+namespace itsppisapi.Controllers.global
 {
     [Route("api/[controller]")]
     [ApiController]

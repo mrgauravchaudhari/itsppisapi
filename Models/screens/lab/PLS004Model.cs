@@ -4,7 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace cfclapi.Models
+namespace itsppisapi.Models
 {
   public class PLS004Model
   {

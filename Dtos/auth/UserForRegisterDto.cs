@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace cfclapi.Dtos
+namespace itsppisapi.Dtos
 {
   public class UserForRegisterDto
   {

@@ -6,9 +6,9 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using cfclapi.Models;
+using itsppisapi.Models;
 
-namespace cfclapi.Controllers
+namespace itsppisapi.Controllers
 {
   [Authorize]
   [Route("api/[controller]")]

@@ -22,7 +22,7 @@
   },
   "targets": {
     ".NETCoreApp,Version=v2.2": {
-      "cfclapi/1.0.0": {
+      "itsppisapi/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Cors": "2.2.0",
@@ -31,10 +31,10 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.2.3"
         },
         "runtime": {
-          "cfclapi.dll": {}
+          "itsppisapi.dll": {}
         },
         "compile": {
-          "cfclapi.dll": {}
+          "itsppisapi.dll": {}
         }
       },
       "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
@@ -3614,7 +3614,7 @@
     }
   },
   "libraries": {
-    "cfclapi/1.0.0": {
+    "itsppisapi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

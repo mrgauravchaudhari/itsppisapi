@@ -5,8 +5,8 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
-using cfclapi.Models;
-namespace cfclapi.Data
+using itsppisapi.Models;
+namespace itsppisapi.Data
 {
     public class PLR202ReportRepository
     {

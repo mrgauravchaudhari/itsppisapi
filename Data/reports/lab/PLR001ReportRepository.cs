@@ -1,13 +1,13 @@
 
 using Microsoft.Extensions.Configuration;
-using cfclapi.Models;
+using itsppisapi.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace cfclapi.Data
+namespace itsppisapi.Data
 {
     public class PLR001ReportRepository
     {

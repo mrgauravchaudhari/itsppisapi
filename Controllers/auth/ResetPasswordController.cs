@@ -4,13 +4,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using cfclapi.Data;
-using cfclapi.Models;
+using itsppisapi.Data;
+using itsppisapi.Models;
 using System.Net.Http;
 using System.Net;
-using cfclapi.Dtos;
+using itsppisapi.Dtos;
 
-namespace cfclapi.Controllers
+namespace itsppisapi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Reflection.Metadata.Ecma335;
 using System.Threading.Tasks;
 
-namespace cfclapi.Models
+namespace itsppisapi.Models
 {
   public class PLS203Model
   {

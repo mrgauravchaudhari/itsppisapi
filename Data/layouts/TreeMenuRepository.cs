@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
-using cfclapi.Models;
-using cfclapi.Dtos;
+using itsppisapi.Models;
+using itsppisapi.Dtos;
 
-namespace cfclapi.Data
+namespace itsppisapi.Data
 {
     public class TreeMenuRepository
     {
@@ -21,7 +21,7 @@ namespace cfclapi.Data
         {
             using (SqlConnection sql = new SqlConnection(_connectionString))
             {
-                //using (SqlCommand cmd = new SqlCommand("SELECT * FROM [CFCL8FULL].[PPIS].[PPV_TREEMENU]", sql))
+                //using (SqlCommand cmd = new SqlCommand("SELECT * FROM [itsppis8FULL].[PPIS].[PPV_TREEMENU]", sql))
                 using (SqlCommand cmd = new SqlCommand("[PPIS].[PPU_P_GET_TREEMENU]", sql))
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;

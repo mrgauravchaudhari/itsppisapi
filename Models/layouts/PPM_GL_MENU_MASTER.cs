@@ -1,5 +1,5 @@
 using System.ComponentModel.DataAnnotations;
-namespace cfclapi.Models
+namespace itsppisapi.Models
 {
     public class PPM_GL_MENU_MASTER
     {

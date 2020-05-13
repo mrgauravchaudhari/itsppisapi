@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\github\\ppis\\cfclapi\\cfclapi.csproj": {}
+    "E:\\github\\online\\itsppisapi\\cfclapi.csproj": {}
   },
   "projects": {
-    "E:\\github\\ppis\\cfclapi\\cfclapi.csproj": {
+    "E:\\github\\online\\itsppisapi\\cfclapi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\github\\ppis\\cfclapi\\cfclapi.csproj",
+        "projectUniqueName": "E:\\github\\online\\itsppisapi\\cfclapi.csproj",
         "projectName": "cfclapi",
-        "projectPath": "E:\\github\\ppis\\cfclapi\\cfclapi.csproj",
+        "projectPath": "E:\\github\\online\\itsppisapi\\cfclapi.csproj",
         "packagesPath": "C:\\Users\\LP1\\.nuget\\packages\\",
-        "outputPath": "E:\\github\\ppis\\cfclapi\\obj\\",
+        "outputPath": "E:\\github\\online\\itsppisapi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

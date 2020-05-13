@@ -4,13 +4,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using cfclapi.Data;
-using cfclapi.Models;
+using itsppisapi.Data;
+using itsppisapi.Models;
 using System.Net.Http;
 using System.Net;
 using Microsoft.AspNetCore.Authorization;
 
-namespace cfclapi.Controllers
+namespace itsppisapi.Controllers
 {
     // [Authorize]
     [Route("api/[controller]")]

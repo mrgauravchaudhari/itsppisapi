@@ -1,11 +1,11 @@
 using System;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using cfclapi.Data;
-using cfclapi.Dtos;
-using cfclapi.Models;
+using itsppisapi.Data;
+using itsppisapi.Dtos;
+using itsppisapi.Models;
 
-namespace cfclapi.Controllers
+namespace itsppisapi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

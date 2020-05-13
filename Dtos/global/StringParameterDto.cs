@@ -1,4 +1,4 @@
-namespace cfclapi.Dtos
+namespace itsppisapi.Dtos
 {
     public class StringParameterDto
     {

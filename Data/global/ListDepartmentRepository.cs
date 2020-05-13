@@ -1,11 +1,11 @@
 using Microsoft.Extensions.Configuration;
-using cfclapi.Models;
+using itsppisapi.Models;
 using System.Data.SqlClient;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System;
 
-namespace cfclapi.Data
+namespace itsppisapi.Data
 {
     public class ListDepartmentRepository
     {
