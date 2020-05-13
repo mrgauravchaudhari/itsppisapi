@@ -1,0 +1,106 @@
+E:\ppiswebapi\ppiswebapi\bin\Debug\netcoreapp2.2\ppiswebapi.deps.json
+E:\ppiswebapi\ppiswebapi\bin\Debug\netcoreapp2.2\ppiswebapi.runtimeconfig.json
+E:\ppiswebapi\ppiswebapi\bin\Debug\netcoreapp2.2\ppiswebapi.runtimeconfig.dev.json
+E:\ppiswebapi\ppiswebapi\bin\Debug\netcoreapp2.2\ppiswebapi.dll
+E:\ppiswebapi\ppiswebapi\bin\Debug\netcoreapp2.2\ppiswebapi.pdb
+E:\ppiswebapi\ppiswebapi\obj\Debug\netcoreapp2.2\ppiswebapi.csprojAssemblyReference.cache
+E:\ppiswebapi\ppiswebapi\obj\Debug\netcoreapp2.2\ppiswebapi.csproj.CoreCompileInputs.cache
+E:\ppiswebapi\ppiswebapi\obj\Debug\netcoreapp2.2\ppiswebapi.RazorAssemblyInfo.cache
+E:\ppiswebapi\ppiswebapi\obj\Debug\netcoreapp2.2\ppiswebapi.RazorAssemblyInfo.cs
+E:\ppiswebapi\ppiswebapi\obj\Debug\netcoreapp2.2\ppiswebapi.AssemblyInfoInputs.cache
+E:\ppiswebapi\ppiswebapi\obj\Debug\netcoreapp2.2\ppiswebapi.AssemblyInfo.cs
+E:\ppiswebapi\ppiswebapi\obj\Debug\netcoreapp2.2\ppiswebapi.RazorTargetAssemblyInfo.cache
+E:\ppiswebapi\ppiswebapi\obj\Debug\netcoreapp2.2\ppiswebapi.dll
+E:\ppiswebapi\ppiswebapi\obj\Debug\netcoreapp2.2\ppiswebapi.pdb
+E:\ppis project\ppiswebapi\ppiswebapi\bin\Debug\netcoreapp2.2\ppiswebapi.deps.json
+E:\ppis project\ppiswebapi\ppiswebapi\bin\Debug\netcoreapp2.2\ppiswebapi.runtimeconfig.json
+E:\ppis project\ppiswebapi\ppiswebapi\bin\Debug\netcoreapp2.2\ppiswebapi.runtimeconfig.dev.json
+E:\ppis project\ppiswebapi\ppiswebapi\bin\Debug\netcoreapp2.2\ppiswebapi.dll
+E:\ppis project\ppiswebapi\ppiswebapi\bin\Debug\netcoreapp2.2\ppiswebapi.pdb
+E:\ppis project\ppiswebapi\ppiswebapi\obj\Debug\netcoreapp2.2\ppiswebapi.csprojAssemblyReference.cache
+E:\ppis project\ppiswebapi\ppiswebapi\obj\Debug\netcoreapp2.2\ppiswebapi.csproj.CoreCompileInputs.cache
+E:\ppis project\ppiswebapi\ppiswebapi\obj\Debug\netcoreapp2.2\ppiswebapi.RazorAssemblyInfo.cache
+E:\ppis project\ppiswebapi\ppiswebapi\obj\Debug\netcoreapp2.2\ppiswebapi.RazorAssemblyInfo.cs
+E:\ppis project\ppiswebapi\ppiswebapi\obj\Debug\netcoreapp2.2\ppiswebapi.AssemblyInfoInputs.cache
+E:\ppis project\ppiswebapi\ppiswebapi\obj\Debug\netcoreapp2.2\ppiswebapi.AssemblyInfo.cs
+E:\ppis project\ppiswebapi\ppiswebapi\obj\Debug\netcoreapp2.2\ppiswebapi.RazorTargetAssemblyInfo.cache
+E:\ppis project\ppiswebapi\ppiswebapi\obj\Debug\netcoreapp2.2\ppiswebapi.dll
+E:\ppis project\ppiswebapi\ppiswebapi\obj\Debug\netcoreapp2.2\ppiswebapi.pdb
+E:\github\ppisapi\ppiswebapi\bin\Debug\netcoreapp2.2\ppiswebapi.deps.json
+E:\github\ppisapi\ppiswebapi\bin\Debug\netcoreapp2.2\ppiswebapi.runtimeconfig.json
+E:\github\ppisapi\ppiswebapi\bin\Debug\netcoreapp2.2\ppiswebapi.runtimeconfig.dev.json
+E:\github\ppisapi\ppiswebapi\bin\Debug\netcoreapp2.2\ppiswebapi.dll
+E:\github\ppisapi\ppiswebapi\bin\Debug\netcoreapp2.2\ppiswebapi.pdb
+E:\github\ppisapi\ppiswebapi\obj\Debug\netcoreapp2.2\ppiswebapi.csprojAssemblyReference.cache
+E:\github\ppisapi\ppiswebapi\obj\Debug\netcoreapp2.2\ppiswebapi.RazorAssemblyInfo.cache
+E:\github\ppisapi\ppiswebapi\obj\Debug\netcoreapp2.2\ppiswebapi.RazorAssemblyInfo.cs
+E:\github\ppisapi\ppiswebapi\obj\Debug\netcoreapp2.2\ppiswebapi.AssemblyInfoInputs.cache
+E:\github\ppisapi\ppiswebapi\obj\Debug\netcoreapp2.2\ppiswebapi.AssemblyInfo.cs
+E:\github\ppisapi\ppiswebapi\obj\Debug\netcoreapp2.2\ppiswebapi.RazorTargetAssemblyInfo.cache
+E:\github\ppisapi\ppiswebapi\obj\Debug\netcoreapp2.2\ppiswebapi.dll
+E:\github\ppisapi\ppiswebapi\obj\Debug\netcoreapp2.2\ppiswebapi.pdb
+E:\github\ppisapi\ppiswebapi\bin\Debug\netcoreapp2.2\appsettings.Development.json
+E:\github\ppisapi\ppiswebapi\bin\Debug\netcoreapp2.2\appsettings.json
+E:\github\ppisapi\ppiswebapi\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
+E:\github\ppisapi-master\ppisapi-master\ppiswebapi\bin\Debug\netcoreapp2.2\ppiswebapi.deps.json
+E:\github\ppisapi-master\ppisapi-master\ppiswebapi\bin\Debug\netcoreapp2.2\ppiswebapi.runtimeconfig.json
+E:\github\ppisapi-master\ppisapi-master\ppiswebapi\bin\Debug\netcoreapp2.2\ppiswebapi.runtimeconfig.dev.json
+E:\github\ppisapi-master\ppisapi-master\ppiswebapi\bin\Debug\netcoreapp2.2\ppiswebapi.dll
+E:\github\ppisapi-master\ppisapi-master\ppiswebapi\bin\Debug\netcoreapp2.2\ppiswebapi.pdb
+E:\github\ppisapi-master\ppisapi-master\ppiswebapi\obj\Debug\netcoreapp2.2\ppiswebapi.csprojAssemblyReference.cache
+E:\github\ppisapi-master\ppisapi-master\ppiswebapi\obj\Debug\netcoreapp2.2\ppiswebapi.csproj.CoreCompileInputs.cache
+E:\github\ppisapi-master\ppisapi-master\ppiswebapi\obj\Debug\netcoreapp2.2\ppiswebapi.RazorAssemblyInfo.cache
+E:\github\ppisapi-master\ppisapi-master\ppiswebapi\obj\Debug\netcoreapp2.2\ppiswebapi.RazorAssemblyInfo.cs
+E:\github\ppisapi-master\ppisapi-master\ppiswebapi\obj\Debug\netcoreapp2.2\ppiswebapi.AssemblyInfoInputs.cache
+E:\github\ppisapi-master\ppisapi-master\ppiswebapi\obj\Debug\netcoreapp2.2\ppiswebapi.AssemblyInfo.cs
+E:\github\ppisapi-master\ppisapi-master\ppiswebapi\obj\Debug\netcoreapp2.2\ppiswebapi.RazorTargetAssemblyInfo.cache
+E:\github\ppisapi-master\ppisapi-master\ppiswebapi\obj\Debug\netcoreapp2.2\ppiswebapi.dll
+E:\github\ppisapi-master\ppisapi-master\ppiswebapi\obj\Debug\netcoreapp2.2\ppiswebapi.pdb
+E:\github\cfcl\cfclapi\bin\Debug\netcoreapp2.2\appsettings.Development.json
+E:\github\cfcl\cfclapi\bin\Debug\netcoreapp2.2\appsettings.json
+E:\github\cfcl\cfclapi\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
+E:\github\cfcl\cfclapi\bin\Debug\netcoreapp2.2\ppiswebapi.deps.json
+E:\github\cfcl\cfclapi\bin\Debug\netcoreapp2.2\ppiswebapi.runtimeconfig.json
+E:\github\cfcl\cfclapi\bin\Debug\netcoreapp2.2\ppiswebapi.runtimeconfig.dev.json
+E:\github\cfcl\cfclapi\bin\Debug\netcoreapp2.2\ppiswebapi.dll
+E:\github\cfcl\cfclapi\bin\Debug\netcoreapp2.2\ppiswebapi.pdb
+E:\github\cfcl\cfclapi\obj\Debug\netcoreapp2.2\ppiswebapi.csprojAssemblyReference.cache
+E:\github\cfcl\cfclapi\obj\Debug\netcoreapp2.2\ppiswebapi.RazorAssemblyInfo.cache
+E:\github\cfcl\cfclapi\obj\Debug\netcoreapp2.2\ppiswebapi.RazorAssemblyInfo.cs
+E:\github\cfcl\cfclapi\obj\Debug\netcoreapp2.2\ppiswebapi.AssemblyInfoInputs.cache
+E:\github\cfcl\cfclapi\obj\Debug\netcoreapp2.2\ppiswebapi.AssemblyInfo.cs
+E:\github\cfcl\cfclapi\obj\Debug\netcoreapp2.2\ppiswebapi.RazorTargetAssemblyInfo.cache
+E:\github\cfcl\cfclapi\obj\Debug\netcoreapp2.2\ppiswebapi.dll
+E:\github\cfcl\cfclapi\obj\Debug\netcoreapp2.2\ppiswebapi.pdb
+E:\github\cfcl\ppis\cfclapi\bin\Debug\netcoreapp2.2\appsettings.Development.json
+E:\github\cfcl\ppis\cfclapi\bin\Debug\netcoreapp2.2\appsettings.json
+E:\github\cfcl\ppis\cfclapi\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
+E:\github\cfcl\ppis\cfclapi\bin\Debug\netcoreapp2.2\ppiswebapi.deps.json
+E:\github\cfcl\ppis\cfclapi\bin\Debug\netcoreapp2.2\ppiswebapi.runtimeconfig.json
+E:\github\cfcl\ppis\cfclapi\bin\Debug\netcoreapp2.2\ppiswebapi.runtimeconfig.dev.json
+E:\github\cfcl\ppis\cfclapi\bin\Debug\netcoreapp2.2\ppiswebapi.dll
+E:\github\cfcl\ppis\cfclapi\bin\Debug\netcoreapp2.2\ppiswebapi.pdb
+E:\github\cfcl\ppis\cfclapi\obj\Debug\netcoreapp2.2\ppiswebapi.csprojAssemblyReference.cache
+E:\github\cfcl\ppis\cfclapi\obj\Debug\netcoreapp2.2\ppiswebapi.RazorAssemblyInfo.cache
+E:\github\cfcl\ppis\cfclapi\obj\Debug\netcoreapp2.2\ppiswebapi.RazorAssemblyInfo.cs
+E:\github\cfcl\ppis\cfclapi\obj\Debug\netcoreapp2.2\ppiswebapi.AssemblyInfoInputs.cache
+E:\github\cfcl\ppis\cfclapi\obj\Debug\netcoreapp2.2\ppiswebapi.AssemblyInfo.cs
+E:\github\cfcl\ppis\cfclapi\obj\Debug\netcoreapp2.2\ppiswebapi.RazorTargetAssemblyInfo.cache
+E:\github\cfcl\ppis\cfclapi\obj\Debug\netcoreapp2.2\ppiswebapi.dll
+E:\github\cfcl\ppis\cfclapi\obj\Debug\netcoreapp2.2\ppiswebapi.pdb
+E:\github\finalppis\cfclapi\bin\Debug\netcoreapp2.2\appsettings.Development.json
+E:\github\finalppis\cfclapi\bin\Debug\netcoreapp2.2\appsettings.json
+E:\github\finalppis\cfclapi\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
+E:\github\finalppis\cfclapi\bin\Debug\netcoreapp2.2\ppiswebapi.deps.json
+E:\github\finalppis\cfclapi\bin\Debug\netcoreapp2.2\ppiswebapi.runtimeconfig.json
+E:\github\finalppis\cfclapi\bin\Debug\netcoreapp2.2\ppiswebapi.runtimeconfig.dev.json
+E:\github\finalppis\cfclapi\bin\Debug\netcoreapp2.2\ppiswebapi.dll
+E:\github\finalppis\cfclapi\bin\Debug\netcoreapp2.2\ppiswebapi.pdb
+E:\github\finalppis\cfclapi\obj\Debug\netcoreapp2.2\ppiswebapi.csprojAssemblyReference.cache
+E:\github\finalppis\cfclapi\obj\Debug\netcoreapp2.2\ppiswebapi.RazorAssemblyInfo.cache
+E:\github\finalppis\cfclapi\obj\Debug\netcoreapp2.2\ppiswebapi.RazorAssemblyInfo.cs
+E:\github\finalppis\cfclapi\obj\Debug\netcoreapp2.2\ppiswebapi.AssemblyInfoInputs.cache
+E:\github\finalppis\cfclapi\obj\Debug\netcoreapp2.2\ppiswebapi.AssemblyInfo.cs
+E:\github\finalppis\cfclapi\obj\Debug\netcoreapp2.2\ppiswebapi.RazorTargetAssemblyInfo.cache
+E:\github\finalppis\cfclapi\obj\Debug\netcoreapp2.2\ppiswebapi.dll
+E:\github\finalppis\cfclapi\obj\Debug\netcoreapp2.2\ppiswebapi.pdb
