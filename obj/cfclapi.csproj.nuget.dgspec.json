@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\git\\itsppisapi\\cfclapi.csproj": {}
+    "E:\\github\\online\\itsppisapi\\cfclapi.csproj": {}
   },
   "projects": {
-    "E:\\git\\itsppisapi\\cfclapi.csproj": {
+    "E:\\github\\online\\itsppisapi\\cfclapi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\git\\itsppisapi\\cfclapi.csproj",
+        "projectUniqueName": "E:\\github\\online\\itsppisapi\\cfclapi.csproj",
         "projectName": "cfclapi",
-        "projectPath": "E:\\git\\itsppisapi\\cfclapi.csproj",
-        "packagesPath": "C:\\Users\\sid\\.nuget\\packages\\",
-        "outputPath": "E:\\git\\itsppisapi\\obj\\",
+        "projectPath": "E:\\github\\online\\itsppisapi\\cfclapi.csproj",
+        "packagesPath": "C:\\Users\\LP1\\.nuget\\packages\\",
+        "outputPath": "E:\\github\\online\\itsppisapi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\sid\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\LP1\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -62,16 +62,10 @@
             }
           },
           "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
+            "net461"
           ],
           "assetTargetFallback": true,
-          "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "warn": true
         }
       }
     }

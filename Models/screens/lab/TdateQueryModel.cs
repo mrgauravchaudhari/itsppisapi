@@ -17,5 +17,8 @@ namespace itsppisapi.Models
     public string L_UNIT_ID { get; set; }
     public string L_REPORT_ID { get; set; }
     public string L_REPORT_NAME { get; set; }
+    public string IN_TAB { get; set; }
+    public decimal IN_SUB_COND_ID { get; set; }
+
   }
 }
