@@ -21,6 +21,8 @@ namespace itsppisapi.Data
         {
             return new PLS003Model()
             {
+                MINDT = reader["MINDT"].ToString(),
+                MAXDT = reader["MAXDT"].ToString(),
                 L_TRANS_DATE = reader["L_TRANS_DATE"].ToString(),
                 L_REPORT_ID = reader["L_REPORT_ID"].ToString(),
                 DIS_REPORT_NAME = reader["DIS_REPORT_NAME"].ToString(),
@@ -36,7 +38,7 @@ namespace itsppisapi.Data
         {
             using (SqlConnection sql = new SqlConnection(_connectionString))
             {
-                using (SqlCommand cmd = new SqlCommand("PPIS.PPU_P_LB1_GET_PPT_LB_DATA_ENTRY", sql))
+                using (SqlCommand cmd = new SqlCommand("[PPIS].[PPU_P_LB1_GET_PPT_LB_DATA_ENTRY]", sql))
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@IN_DATE", data.L_TRANS_DATE));

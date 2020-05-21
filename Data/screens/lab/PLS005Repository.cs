@@ -182,7 +182,7 @@ namespace itsppisapi.Data
         {
             using (SqlConnection sql = new SqlConnection(_connectionString))
             {
-                using (SqlCommand cmd = new SqlCommand("[PPIS].[PPU_P_SAVE_PPT_LB_AMM_NATURAL_GAS]", sql))
+                using (SqlCommand cmd = new SqlCommand("[PPIS].[PPU_P_LB_SAVE_PPT_LB_AMM_NATURAL_GAS]", sql))
                 {
                     // GP1
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
