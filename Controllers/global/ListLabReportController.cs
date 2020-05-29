@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using System.Data;
+using Microsoft.AspNetCore.Authorization;
 
 namespace itsppisapi.Controllers.global
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ListLabReportController : ControllerBase

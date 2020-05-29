@@ -37,9 +37,9 @@ namespace itsppisapi.Controllers
       {
         USER_NAME = userForRegisterDto.USER_NAME,
         USER_DESC = userForRegisterDto.USER_DESC,
-        USER_LEVEL = 1,
+        USER_LEVEL = 0,
         USER_DEPT = userForRegisterDto.USER_DEPT,
-        STATUS = "I",
+        STATUS = "A",
         EPR_NO = userForRegisterDto.EPR_NO,
         USER_EMAIL = userForRegisterDto.USER_EMAIL
       };

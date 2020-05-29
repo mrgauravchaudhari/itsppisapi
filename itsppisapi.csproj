@@ -7,6 +7,7 @@
     <StartupObject></StartupObject>
     <ApplicationIcon />
     <OutputType>Exe</OutputType>
+    <TypeScriptToolsVersion>3.1</TypeScriptToolsVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

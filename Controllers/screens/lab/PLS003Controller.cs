@@ -25,7 +25,7 @@ namespace itsppisapi.Controllers
         }
 
         [HttpPut]
-        public async Task<ActionResult<IEnumerable<PLS003Model>>> Put(PLS003Dto data)
+        public async Task<ActionResult<IEnumerable<PLS003Model>>> Put(StringParameterDto data)
         {
             return await _repository.getData(data);
         }

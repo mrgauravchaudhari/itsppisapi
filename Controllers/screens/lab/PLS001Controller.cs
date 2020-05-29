@@ -2,13 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using itsppisapi.Data;
 using itsppisapi.Models;
-using System.Net.Http;
-using System.Net;
 using Microsoft.AspNetCore.Authorization;
+using itsppisapi.Dtos;
 
 namespace itsppisapi.Controllers
 {
@@ -23,14 +21,14 @@ namespace itsppisapi.Controllers
             _repository = repository ?? throw new ArgumentNullException(nameof(repository));
         }
       
-        [HttpPut("{L_DEPT_CODE}")]
-        public async Task<ActionResult<IEnumerable<rec>>> Get(string L_DEPT_CODE)
+        [HttpPut]
+        public async Task<ActionResult<IEnumerable<rec>>> Put(StringParameterDto data)
         {
             IEnumerable<PLS001Model> tableData;
             IEnumerable<PLS001Model> tblData;
             List<rec> recList = new List<rec>();
-            tableData = await _repository.getData(L_DEPT_CODE);
-            tblData = await _repository.getData(L_DEPT_CODE);
+            tableData = await _repository.getData(data);
+            tblData = await _repository.getData(data);
             foreach (var tableItem in tableData)
             {
                 var recListt = new rec
