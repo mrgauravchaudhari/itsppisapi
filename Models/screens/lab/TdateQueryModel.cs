@@ -10,6 +10,8 @@ namespace itsppisapi.Models
   {
     public string TDATE { get; set; }
     public string IN_DATE { get; set; }
+    public Char IN_BTN { get; set; }
+
     public string L_SHIFT { get; set; }
     public string L_SHIFT_NO { get; set; }
     public string L_TIME { get; set; }

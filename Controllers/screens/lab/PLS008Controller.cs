@@ -1,18 +1,15 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using itsppisapi.Data;
 using itsppisapi.Models;
-using System.Net.Http;
-using System.Net;
+using itsppisapi.Dtos;
 using Microsoft.AspNetCore.Authorization;
 
 namespace itsppisapi.Controllers
 {
-    // [Authorize]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class PLS008Controller : ControllerBase
@@ -24,9 +21,9 @@ namespace itsppisapi.Controllers
         }
 
         [HttpPut]
-        public async Task<ActionResult<List<PLS008Model>>> Put(TdateQueryModel data)
+        public async Task<ActionResult<List<PLS008Model>>> Put(StringParamWbtnDto data)
         {
-            return await _repository.putData(data.IN_DATE);
+            return await _repository.putData(data.StringParameter,data.Btn);
         }
     }
 }

@@ -382,7 +382,7 @@ namespace itsppisapi.Data
       }
     }
 
-    public async Task<PES002Model> putData(string IN_DATE)
+    public async Task<PES002Model> putData(string IN_DATE, char IN_BTN)
     {
       using (SqlConnection sql = new SqlConnection(_connectionString))
       {
@@ -390,6 +390,7 @@ namespace itsppisapi.Data
         {
           cmd.CommandType = System.Data.CommandType.StoredProcedure;
           cmd.Parameters.Add(new SqlParameter("@IN_DATE", IN_DATE));
+          cmd.Parameters.Add(new SqlParameter("@IN_BTN", IN_BTN));
           PES002Model response = null;
           await sql.OpenAsync();
           using (var reader = await cmd.ExecuteReaderAsync())

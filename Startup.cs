@@ -64,13 +64,16 @@ namespace itsppisapi
             // admin : master repository
             services.AddScoped<PGS010Repository>();
             services.AddScoped<PGS010_2Repository>();
-            // services.AddScoped<PGS011Repository>();
+            services.AddScoped<PGS011Repository>();
             services.AddScoped<PGS012Repository>();
-            // services.AddScoped<PGS013Repository>();
+            services.AddScoped<PGS013Repository>();
 
             // global
             services.AddScoped<ListDepartmentRepository>();
             services.AddScoped<ListUserRepository>();
+            services.AddScoped<ListRoleRepository>();
+            services.AddScoped<ListModuleRepository>();
+            services.AddScoped<ListAccessModuleRepository>();
             services.AddScoped<ListReportNameRepository>();
 
             // screen : lab : Repository

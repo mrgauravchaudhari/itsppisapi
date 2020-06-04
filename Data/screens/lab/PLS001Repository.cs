@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
-using itsppisapi.Dtos;
 
 namespace itsppisapi.Data
 {
@@ -32,14 +31,14 @@ namespace itsppisapi.Data
             };
         }
 
-        public async Task<List<PLS001Model>> getData(StringParameterDto data)
+        public async Task<List<PLS001Model>> getData(string DEPT_CODE)
         {
             using (SqlConnection sql = new SqlConnection(_connectionString))
             {
                 using (SqlCommand cmd = new SqlCommand("PPIS.PPU_P_1_GET_PPM_LB_REPORTS", sql))
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@L_DEPT_CODE", data.StringParameter));
+                    cmd.Parameters.Add(new SqlParameter("@L_DEPT_CODE", DEPT_CODE));
                     var response = new List<PLS001Model>();
                     await sql.OpenAsync();
                     using (var reader = await cmd.ExecuteReaderAsync())
@@ -58,7 +57,7 @@ namespace itsppisapi.Data
         {
             using (SqlConnection sql = new SqlConnection(_connectionString))
             {
-                using (SqlCommand cmd = new SqlCommand("select DEPT_CODE,DEPT_NAME from [PPIS].[PPM_GL_DEPARTMENT]", sql))
+                using (SqlCommand cmd = new SqlCommand("select DEPT_CODE,DEPT_NAME from [itsppis8FULL].[PPIS].[PPM_GL_DEPARTMENT]", sql))
                 {
                     var response = new List<PLS001Model>();
                     await sql.OpenAsync();

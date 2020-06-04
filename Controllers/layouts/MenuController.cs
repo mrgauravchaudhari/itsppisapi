@@ -23,7 +23,7 @@ namespace itsppisapi.Controllers
         }
         // GET api/Menu
         [HttpPut]
-        public async Task<ActionResult<IEnumerable<PPV_TREEMENU>>> Put(StringParameterDto data)
+        public async Task<ActionResult<IEnumerable<PPV_TREEMENU>>> Put(NumberParameterDto data)
         {
             IEnumerable<PPV_TREEMENU> menuData;
             IEnumerable<PPV_TREEMENU> _menuParentNodesData;

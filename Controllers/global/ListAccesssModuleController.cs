@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -8,28 +8,23 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace itsppisapi.Controllers
 {
-    [Authorize]
+    // [Authorize]
     [Route("api/[controller]")]
     [ApiController]
-
-    public class PLS002Controller : Controller
+    public class ListAccessModuleController : ControllerBase
     {
-        private readonly PLS002Repository _repository;
-        public PLS002Controller(PLS002Repository repository)
-        {
+        private readonly ListAccessModuleRepository _repository;
+
+        public ListAccessModuleController(ListAccessModuleRepository repository)
+        { 
+            _repository = repository ?? throw new ArgumentNullException(nameof(repository));
             _repository = repository ?? throw new ArgumentNullException(nameof(repository));
         }
 
-        [HttpPut]
-        public async Task<ActionResult<IEnumerable<PLS002Model>>> Put()
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<ListAccessModuleModel>>> Get()
         {
             return await _repository.getData();
-        }
-
-        [HttpPost]
-        public async Task Post(PLS002Model data)
-        {
-            await _repository.saveData(data);
         }
     }
 }

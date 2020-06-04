@@ -34,14 +34,15 @@ namespace itsppisapi.Data
             };
         }
 
-        public async Task<List<PLS003Model>> getData(StringParameterDto data)
+        public async Task<List<PLS003Model>> putData(string IN_DATE, char IN_BTN)
         {
             using (SqlConnection sql = new SqlConnection(_connectionString))
             {
-                using (SqlCommand cmd = new SqlCommand("[PPIS].[PPU_P_LB1_GET_PPT_LB_DATA_ENTRY]", sql))
+                using (SqlCommand cmd = new SqlCommand("PPIS.PPU_P_LB1_GET_PPT_LB_DATA_ENTRY", sql))
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@IN_DATE", data.StringParameter));
+                    cmd.Parameters.Add(new SqlParameter("@IN_DATE", IN_DATE));
+                    cmd.Parameters.Add(new SqlParameter("@IN_BTN",IN_BTN));
                     var response = new List<PLS003Model>();
                     await sql.OpenAsync();
                     using (var reader = await cmd.ExecuteReaderAsync())

@@ -1,33 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
+using System;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using itsppisapi.Data;
 using itsppisapi.Models;
+using itsppisapi.Dtos;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Authorization;
 
 namespace itsppisapi.Controllers
 {
-    [Authorize]
+    // [Authorize]
     [Route("api/[controller]")]
     [ApiController]
-
-    public class PLS002Controller : Controller
+    public class PGS013Controller : ControllerBase
     {
-        private readonly PLS002Repository _repository;
-        public PLS002Controller(PLS002Repository repository)
+        private readonly PGS013Repository _repository;
+        public PGS013Controller(PGS013Repository repository)
         {
             _repository = repository ?? throw new ArgumentNullException(nameof(repository));
         }
 
-        [HttpPut]
-        public async Task<ActionResult<IEnumerable<PLS002Model>>> Put()
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<PGS013Model>>> Get()
         {
             return await _repository.getData();
         }
 
+        //POST api/PGS013
         [HttpPost]
-        public async Task Post(PLS002Model data)
+        public async Task Post(PGS013SaveDto data)
         {
             await _repository.saveData(data);
         }

@@ -22,6 +22,7 @@ namespace itsppisapi.Data
             {
                 MINDT = reader["MINDT"].ToString(),
                 MAXDT = reader["MAXDT"].ToString(),
+                L_TRANS_DATE = reader["L_TRANS_DATE"].ToString(),
                 L_RAKE_NO = reader["L_RAKE_NO"].ToString(),
                 L_UNIT_ID = reader["L_UNIT_ID"].ToString(),
                 L_TIME = reader["L_TIME"].ToString(),
@@ -51,7 +52,7 @@ namespace itsppisapi.Data
             };
         }
 
-        public async Task<List<PLS201Model>> putData(string IN_DATE)
+        public async Task<List<PLS201Model>> putData(string IN_DATE,char IN_BTN)
         {
             using (SqlConnection sql = new SqlConnection(_connectionString))
             {
@@ -59,6 +60,7 @@ namespace itsppisapi.Data
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@IN_DATE", IN_DATE));
+                    cmd.Parameters.Add(new SqlParameter("@IN_BTN", IN_BTN));
                     var response = new List<PLS201Model>();
                     await sql.OpenAsync();
                     using (var reader = await cmd.ExecuteReaderAsync())

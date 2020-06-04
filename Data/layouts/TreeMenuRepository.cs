@@ -17,15 +17,14 @@ namespace itsppisapi.Data
             _connectionString = configuration.GetConnectionString("DBConnection");
         }
 
-        public async Task<List<PPV_TREEMENU>> GetAll(StringParameterDto data)
+        public async Task<List<PPV_TREEMENU>> GetAll(NumberParameterDto data)
         {
             using (SqlConnection sql = new SqlConnection(_connectionString))
             {
-                //using (SqlCommand cmd = new SqlCommand("SELECT * FROM [itsppis8FULL].[PPIS].[PPV_TREEMENU]", sql))
                 using (SqlCommand cmd = new SqlCommand("[PPIS].[PPU_P_GET_TREEMENU]", sql))
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@IN_USER", data.StringParameter));
+                    cmd.Parameters.Add(new SqlParameter("@IN_USER", data.NumberParameter));
                     var response = new List<PPV_TREEMENU>();
                     await sql.OpenAsync();
 

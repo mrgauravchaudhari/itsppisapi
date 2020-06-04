@@ -5,12 +5,12 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using itsppisapi.Data;
 using itsppisapi.Models;
-using Microsoft.AspNetCore.Authorization;
 using itsppisapi.Dtos;
+using Microsoft.AspNetCore.Authorization;
 
 namespace itsppisapi.Controllers
 {
-    // [Authorize]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class PLS001Controller : ControllerBase
@@ -20,15 +20,15 @@ namespace itsppisapi.Controllers
         {
             _repository = repository ?? throw new ArgumentNullException(nameof(repository));
         }
-      
+
         [HttpPut]
-        public async Task<ActionResult<IEnumerable<rec>>> Put(StringParameterDto data)
+        public async Task<ActionResult<IEnumerable<rec>>> Get(StringParameterDto data)
         {
             IEnumerable<PLS001Model> tableData;
             IEnumerable<PLS001Model> tblData;
             List<rec> recList = new List<rec>();
-            tableData = await _repository.getData(data);
-            tblData = await _repository.getData(data);
+            tableData = await _repository.getData(data.StringParameter);
+            tblData = await _repository.getData(data.StringParameter);
             foreach (var tableItem in tableData)
             {
                 var recListt = new rec

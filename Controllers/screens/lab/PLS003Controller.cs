@@ -1,19 +1,15 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using itsppisapi.Data;
 using itsppisapi.Models;
-using System.Net.Http;
-using System.Net;
-using Microsoft.AspNetCore.Authorization;
 using itsppisapi.Dtos;
+using Microsoft.AspNetCore.Authorization;
 
 namespace itsppisapi.Controllers
 {
-    // [Authorize]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class PLS003Controller
@@ -25,9 +21,9 @@ namespace itsppisapi.Controllers
         }
 
         [HttpPut]
-        public async Task<ActionResult<IEnumerable<PLS003Model>>> Put(StringParameterDto data)
+        public async Task<ActionResult<IEnumerable<PLS003Model>>> Put(StringParamWbtnDto data)
         {
-            return await _repository.getData(data);
+            return await _repository.putData(data.StringParameter,data.Btn);
         }
 
     }

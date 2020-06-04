@@ -32,7 +32,7 @@ namespace itsppisapi.Data
             };
         }
 
-        public async Task<List<PLS002Model>> getData(TdateQueryModel data)
+        public async Task<List<PLS002Model>> getData()
         {
             string paramVal = "ALL";
             using (SqlConnection sql = new SqlConnection(_connectionString))
