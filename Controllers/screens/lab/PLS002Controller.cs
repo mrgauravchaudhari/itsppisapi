@@ -26,10 +26,10 @@ namespace itsppisapi.Controllers
             return await _repository.getData();
         }
 
-        [HttpPost]
-        public async Task Post(PLS002Model data)
-        {
-            await _repository.saveData(data);
-        }
+        // [HttpPost]
+        // public async Task Post(PLS002Model data)
+        // {
+        //     await _repository.saveData(data);
+        // }
     }
 }

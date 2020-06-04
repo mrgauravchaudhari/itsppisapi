@@ -55,27 +55,27 @@ namespace itsppisapi.Data
             }
         }
 
-        public async Task saveData(PLS002Model value)
-        {
-            using (SqlConnection sql = new SqlConnection(_connectionString))
-            {
-                using (SqlCommand cmd = new SqlCommand("[PPIS].[PPU_P_LB1_SAVE_PPM_LB_REPORT_SAMPLES]", sql))
-                {
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@L_SAMPLE_NAME", value.L_SAMPLE_NAME));
-                    cmd.Parameters.Add(new SqlParameter("@L_ATTRIBUTE_NAME", value.L_ATTRIBUTE_NAME));
-                    cmd.Parameters.Add(new SqlParameter("@L_SAMPLE_PRINT_SEQ", value.L_SAMPLE_PRINT_SEQ));
-                    cmd.Parameters.Add(new SqlParameter("@L_ACTIVE_FLAG", value.L_ACTIVE_FLAG));
-                    cmd.Parameters.Add(new SqlParameter("@L_MIN_LIMIT", value.L_MIN_LIMIT));
-                    cmd.Parameters.Add(new SqlParameter("@L_MAX_LIMIT", value.L_MAX_LIMIT));
-                    cmd.Parameters.Add(new SqlParameter("@L_MEAS_UNIT", value.L_MEAS_UNIT));
-                    cmd.Parameters.Add(new SqlParameter("@DSP_L_REPORT_NAME", value.DSP_L_REPORT_NAME));
-                    cmd.Parameters.Add(new SqlParameter("@L_REPORT_ID", value.L_REPORT_ID));
-                    await sql.OpenAsync();
-                    await cmd.ExecuteNonQueryAsync();
-                    return;
-                }
-            }
-        }
+        // public async Task saveData(PLS002Model value)
+        // {
+        //     using (SqlConnection sql = new SqlConnection(_connectionString))
+        //     {
+        //         using (SqlCommand cmd = new SqlCommand("[PPIS].[PPU_P_LB1_SAVE_PPM_LB_REPORT_SAMPLES]", sql))
+        //         {
+        //             cmd.CommandType = System.Data.CommandType.StoredProcedure;
+        //             cmd.Parameters.Add(new SqlParameter("@L_SAMPLE_NAME", value.L_SAMPLE_NAME));
+        //             cmd.Parameters.Add(new SqlParameter("@L_ATTRIBUTE_NAME", value.L_ATTRIBUTE_NAME));
+        //             cmd.Parameters.Add(new SqlParameter("@L_SAMPLE_PRINT_SEQ", value.L_SAMPLE_PRINT_SEQ));
+        //             cmd.Parameters.Add(new SqlParameter("@L_ACTIVE_FLAG", value.L_ACTIVE_FLAG));
+        //             cmd.Parameters.Add(new SqlParameter("@L_MIN_LIMIT", value.L_MIN_LIMIT));
+        //             cmd.Parameters.Add(new SqlParameter("@L_MAX_LIMIT", value.L_MAX_LIMIT));
+        //             cmd.Parameters.Add(new SqlParameter("@L_MEAS_UNIT", value.L_MEAS_UNIT));
+        //             cmd.Parameters.Add(new SqlParameter("@DSP_L_REPORT_NAME", value.DSP_L_REPORT_NAME));
+        //             cmd.Parameters.Add(new SqlParameter("@L_REPORT_ID", value.L_REPORT_ID));
+        //             await sql.OpenAsync();
+        //             await cmd.ExecuteNonQueryAsync();
+        //             return;
+        //         }
+        //     }
+        // }
     }
 }
