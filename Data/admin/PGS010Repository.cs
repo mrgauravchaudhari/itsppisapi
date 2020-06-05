@@ -121,7 +121,7 @@ namespace itsppisapi.Data
                     cmd.Parameters.Add(new SqlParameter("@IN_USER_DESC", data.USER_DESC));
                     cmd.Parameters.Add(new SqlParameter("@IN_USER_DEPT ", data.USER_DEPT));
                     cmd.Parameters.Add(new SqlParameter("@IN_USER_LEVEL", data.USER_LEVEL));
-                    cmd.Parameters.Add(new SqlParameter("@IN_EPR_NO", 1111));
+                    cmd.Parameters.Add(new SqlParameter("@IN_EPR_NO",  data.EPR_NO));
                     cmd.Parameters.Add(new SqlParameter("@IN_STATUS", data.STATUS));
                     cmd.Parameters.Add(new SqlParameter("@IN_USER_EMAIL", data.USER_EMAIL));
                     cmd.Parameters.Add(new SqlParameter("@IN_PASSWORD_HASH", PASSWORD_HASH));
