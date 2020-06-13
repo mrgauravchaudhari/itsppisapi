@@ -20,10 +20,31 @@ namespace itsppisapi.Controllers
             _repository = repository ?? throw new ArgumentNullException(nameof(repository));
         }
 
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<PGS013Model>>> Get()
+        [HttpPut]
+        public async Task<ActionResult<PGS013Model>> Put(NumberParameterDto data)
         {
-            return await _repository.getData();
+            return await _repository.putData(data);
+        }
+
+        [HttpPut]
+        [Route("ListAccessModule")]
+        public async Task<ActionResult<ListAccessModuleModel>> Put2(NumberParameterDto data)
+        {
+            return await _repository.putData2(data);
+        }
+
+        [HttpGet]
+        [Route("ListModule")]
+        public async Task<ActionResult<IEnumerable<ListModuleModel>>> Get3()
+        {
+            return await _repository.getData3();
+        }
+
+        [HttpGet]
+        [Route("ListActiveGroup")]
+        public async Task<ActionResult<IEnumerable<ListGroupModel>>> Get4()
+        {
+            return await _repository.getData4();
         }
 
         //POST api/PGS013

@@ -28,8 +28,6 @@ namespace itsppisapi.Controllers
     [HttpPost("register")]
     public async Task<IActionResult> Register(UserForRegisterDto userForRegisterDto)
     {
-      userForRegisterDto.USER_NAME = userForRegisterDto.USER_NAME.ToLower();
-
       if (await _repository.UserExists(userForRegisterDto.USER_NAME))
         return BadRequest("UserName already Exists.");
 
@@ -39,8 +37,9 @@ namespace itsppisapi.Controllers
         USER_DESC = userForRegisterDto.USER_DESC,
         USER_LEVEL = 0,
         USER_DEPT = userForRegisterDto.USER_DEPT,
-        STATUS = "A",
-        EPR_NO = userForRegisterDto.EPR_NO,
+        ACTIVE_FLAG = "A",
+        USER_EPR_NO = userForRegisterDto.USER_EPR_NO,
+        USER_PHONE_NO = userForRegisterDto.USER_PHONE_NO,
         USER_EMAIL = userForRegisterDto.USER_EMAIL
       };
 
@@ -52,7 +51,7 @@ namespace itsppisapi.Controllers
     [HttpPost("login")]
     public async Task<IActionResult> Login(UserForLoginDto userForLoginDto)
     {
-      var userFromRepository = await _repository.Login(userForLoginDto.USER_NAME.ToLower(), userForLoginDto.PASSWORD);
+      var userFromRepository = await _repository.Login(userForLoginDto.USER_NAME, userForLoginDto.PASSWORD);
 
       if (userFromRepository == null)
           return Unauthorized();

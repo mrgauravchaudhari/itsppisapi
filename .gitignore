@@ -3,6 +3,9 @@
 # 3.0 templates should be even less
 # wwwroot/lib/
 # When wwwroot/lib/ is commented out, excluse .min and .map files
+# Server=LAPTOP-EFVRKU9C; Database=cfcl8; UID=sa; PWD=sql9; Trusted_Connection=True; MultipleActiveResultSets=True;
+# Persist Security Info=False; User ID=sa; Password=sql9; Initial Catalog=CFCL8FULL; Server=DEV4PC;
+
 *.min.css
 *.min.js
 *.map

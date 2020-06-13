@@ -22,12 +22,12 @@ namespace itsppisapi.Data
         {
             return new PGS012Model()
             {
-                ROLE_ID = (decimal)reader["ROLE_ID"],
-                ROLE_NAME = reader["ROLE_NAME"].ToString(),
-                ROLE_DESC = reader["ROLE_DESC"].ToString(),
-                USER_NAME = reader["USER_NAME"].ToString(),
+                GROUP_ID = (decimal)reader["GROUP_ID"],
+                GROUP_NAME = reader["GROUP_NAME"].ToString(),
+                GROUP_DESC = reader["GROUP_DESC"].ToString(),
+                USER_BY = (decimal)reader["USER_BY"],
                 ACTIVE_FLG = reader["ACTIVE_FLG"].ToString(),
-                ROLE_MODULES = reader["ROLE_MODULES"].ToString()
+                GROUP_MODULES = reader["GROUP_MODULES"].ToString()
             };
         }
 
@@ -35,10 +35,10 @@ namespace itsppisapi.Data
         {
             using (SqlConnection sql = new SqlConnection(_connectionString))
             {
-                using (SqlCommand cmd = new SqlCommand("[PPIS].[PPU_P_GET_PPM_GL_ROLES]", sql))
+                using (SqlCommand cmd = new SqlCommand("[PPIS].[PPU_P_GET_PPM_GL_MODULE_GROUP_NEW]", sql))
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@IN_ROLE_NAME", data.StringParameter));
+                    cmd.Parameters.Add(new SqlParameter("@IN_GROUP_NAME", data.StringParameter));
                     PGS012Model response = null;
                     await sql.OpenAsync();
                     using (var reader = await cmd.ExecuteReaderAsync())
@@ -57,14 +57,14 @@ namespace itsppisapi.Data
         {
             using (SqlConnection sql = new SqlConnection(_connectionString))
             {
-                using (SqlCommand cmd = new SqlCommand("[PPIS].[PPU_P_SAVE_PPM_GL_ROLES]", sql))
+                using (SqlCommand cmd = new SqlCommand("[PPIS].[PPU_P_SAVE_PPM_GL_MODULE_GROUP_NEW]", sql))
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@IN_ROLE_NAME", data.ROLE_NAME));
-                    cmd.Parameters.Add(new SqlParameter("@IN_ROLE_DESC", data.ROLE_DESC));
+                    cmd.Parameters.Add(new SqlParameter("@IN_GROUP_NAME", data.GROUP_NAME));
+                    cmd.Parameters.Add(new SqlParameter("@IN_GROUP_DESC", data.GROUP_DESC));
                     cmd.Parameters.Add(new SqlParameter("@IN_ACTIVE_FLG", data.ACTIVE_FLG));
                     cmd.Parameters.Add(new SqlParameter("@IN_USER_BY", data.USER_BY));
-                    cmd.Parameters.Add(new SqlParameter("@IN_ROLE_MODULES", data.ROLE_MODULES));
+                    cmd.Parameters.Add(new SqlParameter("@IN_GROUP_MODULES", data.GROUP_MODULES));
                     await sql.OpenAsync();
                     await cmd.ExecuteNonQueryAsync();
                     return;

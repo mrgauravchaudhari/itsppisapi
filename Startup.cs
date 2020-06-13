@@ -71,9 +71,6 @@ namespace itsppisapi
             // global
             services.AddScoped<ListDepartmentRepository>();
             services.AddScoped<ListUserRepository>();
-            services.AddScoped<ListRoleRepository>();
-            services.AddScoped<ListModuleRepository>();
-            services.AddScoped<ListAccessModuleRepository>();
             services.AddScoped<ListReportNameRepository>();
 
             // screen : lab : Repository

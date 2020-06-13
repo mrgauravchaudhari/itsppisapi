@@ -22,34 +22,20 @@ namespace itsppisapi.Data
         {
             return new PGS010Model()
             {
-                USER_ID = (int)reader["USER_ID"],
+                USER_ID = (decimal)reader["USER_ID"],
                 USER_NAME = reader["USER_NAME"].ToString(),
                 USER_DESC = reader["USER_DESC"].ToString(),
-                USER_LEVEL = (int)reader["USER_LEVEL"],
+                USER_LEVEL = (decimal)reader["USER_LEVEL"],
                 USER_DEPT = reader["USER_DEPT"].ToString(),
-                STATUS = reader["STATUS"].ToString(),
-                EPR_NO = (int)reader["EPR_NO"],
+                USER_EPR_NO = (decimal)reader["USER_EPR_NO"],
+                USER_PHONE_NO = reader["USER_PHONE_NO"].ToString(),
                 USER_EMAIL = reader["USER_EMAIL"].ToString(),
-            };
-        }
-
-        private PGS010Model MapToValue2(SqlDataReader reader)
-        {
-            return new PGS010Model()
-            {
-                USER_NAME = reader["USER_NAME"].ToString(),
-                USER_DESC = reader["USER_DESC"].ToString(),
-                USER_LEVEL = (int)reader["USER_LEVEL"],
-                USER_DEPT = reader["USER_DEPT"].ToString(),
-                STATUS = reader["STATUS"].ToString(),
-                EPR_NO = (int)reader["EPR_NO"],
-                USER_EMAIL = reader["USER_EMAIL"].ToString(),
+                ACTIVE_FLAG = reader["ACTIVE_FLAG"].ToString(),
             };
         }
 
         public async Task<List<PGS010Model>> getData()
         {
-
             using (SqlConnection sql = new SqlConnection(_connectionString))
             {
                 using (SqlCommand cmd = new SqlCommand("SELECT * FROM [PPIS].[PPM_GL_MST_USERS]", sql))
@@ -66,7 +52,6 @@ namespace itsppisapi.Data
                     return response;
                 }
             }
-
         }
 
         public async Task<PGS010Model> putData(StringParameterDto data)
@@ -85,7 +70,7 @@ namespace itsppisapi.Data
                         {
                             while (await reader.ReadAsync())
                             {
-                                response = MapToValue2(reader);
+                                response = MapToValue(reader);
                             }
                         }
                         return response;
@@ -95,13 +80,14 @@ namespace itsppisapi.Data
             catch (Exception ex)
             {
                 PGS010Model objdata = new PGS010Model();
+                objdata.USER_NAME = data.StringParameter;
                 objdata.USER_DESC = "";
                 objdata.USER_LEVEL = 0;
                 objdata.USER_DEPT = "";
-                objdata.STATUS = "";
-                objdata.EPR_NO = 0;
-                objdata.USER_EMAIL = "";
-                objdata.USER_NAME = ex.Message;
+                objdata.ACTIVE_FLAG = "";
+                objdata.USER_EPR_NO = 0;
+                objdata.USER_PHONE_NO = "";
+                objdata.USER_EMAIL = ex.Message;
                 return objdata;
             }
         }
@@ -116,14 +102,15 @@ namespace itsppisapi.Data
                 using (SqlCommand cmd = new SqlCommand("[PPIS].[PPU_P_SAVE_PPM_GL_MST_USERS]", sql))
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@IN_USER_ID", data.USER_ID));
                     cmd.Parameters.Add(new SqlParameter("@IN_USER_NAME", data.USER_NAME));
                     cmd.Parameters.Add(new SqlParameter("@IN_USER_DESC", data.USER_DESC));
                     cmd.Parameters.Add(new SqlParameter("@IN_USER_DEPT ", data.USER_DEPT));
                     cmd.Parameters.Add(new SqlParameter("@IN_USER_LEVEL", data.USER_LEVEL));
-                    cmd.Parameters.Add(new SqlParameter("@IN_EPR_NO",  data.EPR_NO));
-                    cmd.Parameters.Add(new SqlParameter("@IN_STATUS", data.STATUS));
+                    cmd.Parameters.Add(new SqlParameter("@IN_USER_EPR_NO", data.USER_EPR_NO));
+                    cmd.Parameters.Add(new SqlParameter("@IN_USER_PHONE_NO", data.USER_PHONE_NO));
                     cmd.Parameters.Add(new SqlParameter("@IN_USER_EMAIL", data.USER_EMAIL));
+                    cmd.Parameters.Add(new SqlParameter("@IN_ACTIVE_FLAG", data.ACTIVE_FLAG));
+                    cmd.Parameters.Add(new SqlParameter("@IN_ENTERED_BY", data.ENTERED_BY));
                     cmd.Parameters.Add(new SqlParameter("@IN_PASSWORD_HASH", PASSWORD_HASH));
                     cmd.Parameters.Add(new SqlParameter("@IN_PASSWORD_SALT", PASSWORD_SALT));
                     await sql.OpenAsync();
@@ -141,27 +128,5 @@ namespace itsppisapi.Data
                 PASSWORD_HASH = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(PASSWORD));
             }
         }
-
-        //public async Task<List<PGS010Model>> getData(StringParameterDto data)
-        //{
-        //  using (SqlConnection sql = new SqlConnection(_connectionString))
-        //  {
-        //    using (SqlCommand cmd = new SqlCommand("PPIS.PPU_P_GET_GL_MST_USERS", sql))
-        //    {
-        //      cmd.CommandType = System.Data.CommandType.StoredProcedure;
-        //      cmd.Parameters.Add(new SqlParameter("@IN_USER_NAME", data.StringParameter));
-        //      var response = new List<PGS010Model>();
-        //      await sql.OpenAsync();
-        //      using (var reader = await cmd.ExecuteReaderAsync())
-        //      {
-        //        while (await reader.ReadAsync())
-        //        {
-        //          response.Add(MapToValue(reader));
-        //        }
-        //      }
-        //      return response;
-        //    }
-        //  }
-        //}
     }
 }

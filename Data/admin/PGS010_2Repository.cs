@@ -79,13 +79,13 @@ namespace itsppisapi.Data
                 using (SqlCommand cmd = new SqlCommand("[PPIS].[PPU_P_SAVE_PPM_GL_MST_USERS]", sql))
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@IN_USER_ID", data.USER_ID));
+                    // cmd.Parameters.Add(new SqlParameter("@IN_USER_ID", data.USER_ID));
                     cmd.Parameters.Add(new SqlParameter("@IN_USER_NAME", data.USER_NAME));
                     cmd.Parameters.Add(new SqlParameter("@IN_USER_DESC", data.USER_DESC));
                     cmd.Parameters.Add(new SqlParameter("@IN_USER_DEPT ", data.USER_DEPT));
                     cmd.Parameters.Add(new SqlParameter("@IN_USER_LEVEL", data.USER_LEVEL));
                     cmd.Parameters.Add(new SqlParameter("@IN_EPR_NO", 1111));
-                    cmd.Parameters.Add(new SqlParameter("@IN_STATUS", data.STATUS));
+                  //  cmd.Parameters.Add(new SqlParameter("@IN_STATUS", data.STATUS));
                     cmd.Parameters.Add(new SqlParameter("@IN_USER_EMAIL", data.USER_EMAIL));
                     cmd.Parameters.Add(new SqlParameter("@IN_PASSWORD_HASH", PASSWORD_HASH));
                     cmd.Parameters.Add(new SqlParameter("@IN_PASSWORD_SALT", PASSWORD_SALT));

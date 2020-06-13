@@ -19,7 +19,7 @@ namespace itsppisapi.Data
         {
             return new ListUserModel()
             {
-                USER_ID = (int)reader["USER_ID"],
+                USER_ID = (decimal)reader["USER_ID"],
                 USER_NAME = reader["USER_NAME"].ToString()
             };
         }
@@ -30,7 +30,7 @@ namespace itsppisapi.Data
             {
                 using (SqlConnection sql = new SqlConnection(_connectionString))
                 {
-                    using (SqlCommand cmd = new SqlCommand("SELECT USER_ID,USER_NAME FROM [PPIS].[PPM_GL_MST_USERS] WHERE STATUS = 'A'", sql))
+                    using (SqlCommand cmd = new SqlCommand("SELECT USER_ID,USER_NAME FROM [PPIS].[PPM_GL_MST_USERS] WHERE ACTIVE_FLAG = 'A'", sql))
                     {
                         var response = new List<ListUserModel>();
                         await sql.OpenAsync();

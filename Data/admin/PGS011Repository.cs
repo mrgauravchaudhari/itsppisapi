@@ -26,13 +26,14 @@ namespace itsppisapi.Data
                 MODULE_NAME = reader["MODULE_NAME"].ToString(),
                 MODULE_DESC = reader["MODULE_DESC"].ToString(),
                 MODULE_TYPE = reader["MODULE_TYPE"].ToString(),
-                USER_ID = (decimal)reader["USER_ID"],
                 PARENT_MODULE_NAME = reader["PARENT_MODULE_NAME"].ToString(),
+                FORM_NAME = reader["FORM_NAME"].ToString(),
                 ROUTE_LINK = reader["ROUTE_LINK"].ToString(),
                 LONG_DESC = reader["LONG_DESC"].ToString(),
                 DEPT_CODE = reader["DEPT_CODE"].ToString(),
                 UNIT_ID = reader["UNIT_ID"].ToString(),
                 ACTIVE_FLG = reader["ACTIVE_FLG"].ToString(),
+                ENTERED_BY = (decimal)reader["ENTERED_BY"],
             };
         }
 
@@ -41,7 +42,7 @@ namespace itsppisapi.Data
 
             using (SqlConnection sql = new SqlConnection(_connectionString))
             {
-                using (SqlCommand cmd = new SqlCommand("SELECT * FROM [PPIS].[PPM_GL_MODULE]", sql))
+                using (SqlCommand cmd = new SqlCommand("SELECT * FROM [PPIS].[PPM_GL_MODULE_NEW]", sql))
                 {
                     var response = new List<PGS011Model>();
                     await sql.OpenAsync();
@@ -63,7 +64,7 @@ namespace itsppisapi.Data
             {
                 using (SqlConnection sql = new SqlConnection(_connectionString))
                 {
-                    using (SqlCommand cmd = new SqlCommand("PPIS.PPU_P_GET_PPM_GL_MODULE", sql))
+                    using (SqlCommand cmd = new SqlCommand("PPIS.PPU_P_GET_PPM_GL_MODULE_NEW", sql))
                     {
                         cmd.CommandType = System.Data.CommandType.StoredProcedure;
                         cmd.Parameters.Add(new SqlParameter("@IN_MODULE_NAME", data.StringParameter));
@@ -86,8 +87,9 @@ namespace itsppisapi.Data
                 objdata.MODULE_NAME = "";
                 objdata.MODULE_DESC = "";
                 objdata.MODULE_TYPE = "";
-                objdata.USER_ID = 0;
+                objdata.ENTERED_BY = 0;
                 objdata.PARENT_MODULE_NAME = "";
+                objdata.FORM_NAME = "";
                 objdata.ROUTE_LINK = "";
                 objdata.LONG_DESC = "";
                 objdata.DEPT_CODE = "";
@@ -101,19 +103,20 @@ namespace itsppisapi.Data
         {
             using (SqlConnection sql = new SqlConnection(_connectionString))
             {
-                using (SqlCommand cmd = new SqlCommand("[PPIS].[PPU_P_SAVE_PPM_GL_MODULE]", sql))
+                using (SqlCommand cmd = new SqlCommand("[PPIS].[PPU_P_SAVE_PPM_GL_MODULE_NEW]", sql))
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@IN_MODULE_NAME", data.MODULE_NAME));
                     cmd.Parameters.Add(new SqlParameter("@IN_MODULE_DESC", data.MODULE_DESC));
                     cmd.Parameters.Add(new SqlParameter("@IN_MODULE_TYPE", data.MODULE_TYPE));
-                    cmd.Parameters.Add(new SqlParameter("@IN_USER_ID", data.USER_ID));
                     cmd.Parameters.Add(new SqlParameter("@IN_PARENT_MODULE_NAME", data.PARENT_MODULE_NAME));
+                    cmd.Parameters.Add(new SqlParameter("@IN_FORM_NAME", data.FORM_NAME));
                     cmd.Parameters.Add(new SqlParameter("@IN_ROUTE_LINK", data.ROUTE_LINK));
                     cmd.Parameters.Add(new SqlParameter("@IN_LONG_DESC", data.LONG_DESC));
                     cmd.Parameters.Add(new SqlParameter("@IN_DEPT_CODE", data.DEPT_CODE));
                     cmd.Parameters.Add(new SqlParameter("@IN_UNIT_ID", data.UNIT_ID));
                     cmd.Parameters.Add(new SqlParameter("@IN_ACTIVE_FLG", data.ACTIVE_FLG));
+                    cmd.Parameters.Add(new SqlParameter("@IN_ENTERED_BY", data.ENTERED_BY));
                     await sql.OpenAsync();
                     await cmd.ExecuteNonQueryAsync();
                     return;
