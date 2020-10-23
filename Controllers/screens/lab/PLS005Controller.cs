@@ -1,19 +1,15 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using itsppisapi.Data;
 using itsppisapi.Models;
-using System.Net.Http;
-using System.Net;
 using Microsoft.AspNetCore.Authorization;
 using itsppisapi.Dtos;
 
 namespace itsppisapi.Controllers
 {
-    // [Authorize]
+    [Authorize(AuthenticationSchemes = "Bearer")]
     [Route("api/[controller]")]
     [ApiController]
     public class PLS005Controller : ControllerBase
@@ -25,7 +21,7 @@ namespace itsppisapi.Controllers
         }
 
         [HttpPut]
-        public async Task<ActionResult<IEnumerable<PLS005Model>>> Put(TransactionDateDto data)
+        public async Task<ActionResult<IEnumerable<PLS005Model>>> Put(threeParamDto data)
         {
             return await _repository.getData(data);
         }

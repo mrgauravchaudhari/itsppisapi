@@ -23,12 +23,6 @@ namespace itsppisapi.Controllers
             this._repository = repository ?? throw new ArgumentNullException(nameof(repository));
         }
 
-        // [HttpPost("{username}/{temppwd}/{newpwd}")]
-        // public async Task<ActionResult<ResetPasswordModel>> Put(ResetPasswordDto data)
-        // {
-        //     return await _repository.getData(data);
-        // }
-
         [HttpPut]
         public async Task<ActionResult<ResetPasswordModel>> Put(ResetPasswordDto data)
         {

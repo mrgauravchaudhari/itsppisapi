@@ -81,24 +81,24 @@ namespace itsppisapi.Dtos
         public decimal E3_UR_TA_PMCC_FEEDER_2_INT_DIFF { get; set; }
         public decimal E3_UR_TB_PMCC_FEEDER_1_INT_DIFF { get; set; }
         public decimal E3_UR_TB_PMCC_FEEDER_2_INT_DIFF { get; set; }
-        public string E3_LIGHTING_TRANSFMR_1_INT_DIFF { get; set; }
-        public string E3_LIGHTING_TRANSFMR_2_INT_DIFF { get; set; }
-        public string E3_UPS_FEEDER_1_INT_DIFF { get; set; }
-        public string E3_UPS_FEEDER_2_INT_DIFF { get; set; }
-        public string E3_HVAC_INT_DIFF { get; set; }
-        public string E3_CCR_HVAC_INT_DIFF { get; set; }
-        public string E3_SUPPLY_TO_PSA_MOTORS { get; set; }
+        public decimal E3_LIGHTING_TRANSFMR_1_INT_DIFF { get; set; }
+        public decimal E3_LIGHTING_TRANSFMR_2_INT_DIFF { get; set; }
+        public decimal E3_UPS_FEEDER_1_INT_DIFF { get; set; }
+        public decimal E3_UPS_FEEDER_2_INT_DIFF { get; set; }
+        public decimal E3_HVAC_INT_DIFF { get; set; }
+        public decimal E3_CCR_HVAC_INT_DIFF { get; set; }
+        public decimal E3_SUPPLY_TO_PSA_MOTORS { get; set; }
 
-        public string E3_11_KV_SUPPLY_TO_MP_7801C_INT { get; set; }
-        public string E3_11_KV_SUPPLY_TO_MP_7808C_INT { get; set; }
-        public string E3_SUPPLY_TO_415V_TRANSFMR_1_INT { get; set; }
-        public string E3_SUPPLY_TO_415V_TRANSFMR_2_INT { get; set; }
-        public string E3_11_KV_TOT_415V_AVAILABLE { get; set; }
-        public string E3_11_KV_CT_UNACCOUNTED { get; set; }
+        public decimal E3_11_KV_SUPPLY_TO_MP_7801C_INT { get; set; }
+        public decimal E3_11_KV_SUPPLY_TO_MP_7808C_INT { get; set; }
+        public decimal E3_SUPPLY_TO_415V_TRANSFMR_1_INT { get; set; }
+        public decimal E3_SUPPLY_TO_415V_TRANSFMR_2_INT { get; set; }
+        public decimal E3_11_KV_TOT_415V_AVAILABLE { get; set; }
+        public decimal E3_11_KV_CT_UNACCOUNTED { get; set; }
 
-        public string E3_3_3_KV_SUPPLY_TO_MP_7601B_INT { get; set; }
-        public string E3_3_3_KV_SUPPLY_TO_MP_7811A_INT { get; set; }
-        public string E3_3_3_KV_SUPPLY_TO_MP_7811B_INT { get; set; }
+        public decimal E3_3_3_KV_SUPPLY_TO_MP_7601B_INT { get; set; }
+        public decimal E3_3_3_KV_SUPPLY_TO_MP_7811A_INT { get; set; }
+        public decimal E3_3_3_KV_SUPPLY_TO_MP_7811B_INT { get; set; }
         public decimal E3_3_3_KV_SUPPLY_TO_GTG_MOTOR_INT { get; set; }
         public decimal E3_3_3_KV_SUPPLY_TO_UTIL_FEEDER_1_INT { get; set; }
         public decimal E3_3_3_KV_SUPPLY_TO_UTIL_FEEDER_2_INT { get; set; }
@@ -142,7 +142,7 @@ namespace itsppisapi.Dtos
         public decimal E3_RW_RESERVOIR_FEEDER_1_INT_DIFF { get; set; }
         public decimal E3_RW_RESERVOIR_FEEDER_2_INT_DIFF { get; set; }
         public decimal E3_RW_RESERVOIR_CONSP { get; set; }
-        public string ENTERD_BY { get; set; }
+        public string ENTERED_BY { get; set; }
         public string MODIFIED_BY { get; set; }
         public string ENTERED_DATETIME { get; set; }
         public string MODIFY_DATETIME { get; set; }

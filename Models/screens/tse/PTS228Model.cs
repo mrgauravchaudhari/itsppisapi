@@ -1,0 +1,114 @@
+namespace itsppisapi.Models
+{
+    public class PTS228Model
+    {
+        public decimal MINIDENTITY { get; set; }
+        public decimal MINYEAR { get; set; }
+        public decimal MAXIDENTITY { get; set; }
+        public decimal MAXYEAR { get; set; }
+        public decimal T_YEAR { get; set; }
+        public decimal T_IDENTITY { get; set; }
+        public decimal T_VERSION { get; set; }
+        public string T_UNIT_ID { get; set; }
+        public decimal T_USER_ID { get; set; }
+        public string T_USER_NAME { get; set; }
+        public string T_DATE_MOD { get; set; }
+
+        public decimal T_RSB_PURCHASED { get; set; }
+        public decimal T_RSB_CONSP_UPH { get; set; }
+        public decimal T_RSB_CONSP_UPH_GP1 { get; set; }
+        public decimal T_RSB_CONSP_UPH_GP2 { get; set; }
+        public decimal T_RSB_CONSP_WPT { get; set; }
+        public decimal T_RSB_CONSP_DMW { get; set; }
+        public decimal T_RSB_CONSP_IA { get; set; }
+        public decimal T_RSB_1905_CONSP_IA { get; set; }
+        public decimal T_RSB_CONSP_IA_GP1 { get; set; }
+        public decimal T_RSB_CONSP_IA_GP2 { get; set; }
+        public decimal T_RSB_1901_CONSP_IA_GP2 { get; set; }
+        public decimal T_RSB_CONSP_ETP { get; set; }
+        public decimal T_RSB_CONSP_ETP_GP1 { get; set; }
+        public decimal T_RSB_CONSP_ETP_GP2 { get; set; }
+        public decimal T_RSB_1901_CONSP_ETP_GP2 { get; set; }
+        public decimal T_RSB_CONSP_RW_PMP { get; set; }
+        public decimal T_RSB_CONSP_KS { get; set; }
+        public decimal T_RSB_CONSP_KS_GP1 { get; set; }
+        public decimal T_RSB_CONSP_KS_GP2 { get; set; }
+        public decimal T_RSB_CONSP_HC { get; set; }
+        public decimal T_RSB_CONSP_HC_GP1 { get; set; }
+        public decimal T_RSB_CONSP_HC_GP2 { get; set; }
+        public decimal T_RSB_CONSP_CBSL { get; set; }
+        public decimal T_RSB_CONSP_CBSL_GP1 { get; set; }
+        public decimal T_RSB_CONSP_CBSL_GP2 { get; set; }
+        public decimal T_RSB_CONSP_OTHERS_GP1 { get; set; }
+        public decimal T_RSB_CONSP_ACT_GP1 { get; set; }
+        public decimal T_RSB_CONSP_UCT_GP1 { get; set; }
+        public decimal T_RSB_TOT_CONSP { get; set; }
+        public decimal T_RSB_CPP_TOT_CONSP { get; set; }
+        public decimal T_RSB_ALLOC_DM_TOT { get; set; }
+        public decimal T_RSB_ALLOC_AM2_DM { get; set; }
+        public decimal T_RSB_ALLOC_UR2_DM { get; set; }
+        public decimal T_RSB_ALLOC_GP2_DM { get; set; }
+        public decimal T_RSB_ALLOC_GP1_DM { get; set; }
+        public decimal T_RSB_TO_WPT { get; set; }
+        public decimal T_RSB_ALLOC_GP2_AM2_CT_MKUP_PW { get; set; }
+        public decimal T_RSB_ALLOC_GP2_UR2_CT_MKUP_PW { get; set; }
+        public decimal T_RSB_ALLOC_GP2_UR2_NP_PW { get; set; }
+        public decimal T_RSB_ALLOC_GP2_UR2_TOT_PW { get; set; }
+        public decimal T_RSB_ALLOC_DM_GP2_PW { get; set; }
+        public decimal T_RSB_ALLOC_TOT_GP2_PW { get; set; }
+        public decimal T_RSB_ALLOC_GP1_PW { get; set; }
+        public decimal T_RSB_1901_TOT { get; set; }
+        public decimal T_RSB_1905T_TOT { get; set; }
+        public decimal T_RSB_20S_TOT { get; set; }
+        public decimal T_RSB_20S_TOT_NPC { get; set; }
+        public decimal T_RSB_CONSP_IA_GP2_SC_AP { get; set; }
+        public decimal T_RSB_ALLOC_AM2_DM_SC_AP { get; set; }
+        public decimal T_RSB_ALO_G2_AMCTMKUP_PW_SC_AP { get; set; }
+        public decimal T_RSB_1901_CONSP_ETP_GP2_SC_AP { get; set; }
+        public decimal T_RSB_1901_TOT_SC_AP { get; set; }
+        public decimal T_RSB_CONSP_IA_GP2_SC_AH { get; set; }
+        public decimal T_RSB_ALLOC_AM2_DM_SC_AH { get; set; }
+        public decimal T_RSB_ALO_G2_AMCTMKUP_PW_SC_AH { get; set; }
+        public decimal T_RSB_1901_CONSP_ETP_GP2_SC_AH { get; set; }
+        public decimal T_RSB_1901_TOT_SC_AH { get; set; }
+        public decimal T_RSB_CONSP_UPH_GP2_SC_UP { get; set; }
+        public decimal T_RSB_TO_WPT_SC_UP { get; set; }
+        public decimal T_RSB_ALLOC_UR2_DM_SC_UP { get; set; }
+        public decimal T_RSB_1905_CONSP_IA_SC_UP { get; set; }
+        public decimal T_RSB_1901_CONSP_ETP_GP2_SC_UP { get; set; }
+        public decimal T_RSB_CONSP_KS_GP2_SC_UP { get; set; }
+        public decimal T_RSB_CONSP_HC_GP2_SC_UP { get; set; }
+        public decimal T_RSB_CONSP_CBSL_GP2_SC_UP { get; set; }
+        public decimal T_RSB_1905T_TOT_SC_UP { get; set; }
+        public decimal T_RSB_CONSP_UPH_GP2_SC_UH { get; set; }
+        public decimal T_RSB_TO_WPT_SC_UH { get; set; }
+        public decimal T_RSB_ALLOC_UR2_DM_SC_UH { get; set; }
+        public decimal T_RSB_1905_CONSP_IA_SC_UH { get; set; }
+        public decimal T_RSB_1901_CONSP_ETP_GP2_SC_UH { get; set; }
+        public decimal T_RSB_CONSP_KS_GP2_SC_UH { get; set; }
+        public decimal T_RSB_CONSP_HC_GP2_SC_UH { get; set; }
+        public decimal T_RSB_CONSP_CBSL_GP2_SC_UH { get; set; }
+        public decimal T_RSB_1905T_TOT_SC_UH { get; set; }
+        public decimal T_RSB_PUR_SCA_UP { get; set; }
+        public decimal T_RSB_PUR_OE { get; set; }
+        public decimal T_RSB_NPC_SCA_UP { get; set; }
+        public decimal T_RSB_WS1_PURCHASED { get; set; }
+        public decimal T_RSB_WS1_ALLOC_TO_UR2 { get; set; }
+        public decimal T_FI2_TOT_RSB { get; set; }
+        public decimal T_MI3_TOT_RSB { get; set; }
+        public string T_STATUS { get; set; }
+        public decimal T_RSB_ALLOC_DMP_GP2 { get; set; }
+        public decimal T_RSB_CONSP_SSP { get; set; }
+        public decimal T_IEX_PURCHASED { get; set; }
+        public decimal T_PUR_PWR_CONST_CFG3 { get; set; }
+        public decimal T_PUR_PWR_EXPORTT_GP3 { get; set; }
+        public decimal T_PWR_CONSP_HOUSING_UNIT3 { get; set; }
+        public decimal T_PWR_CONSP_BLDG_STRTS_UNIT3 { get; set; }
+        public decimal T_PRCHSD_PWR_CONSP_GP3 { get; set; }
+        // -------------- DV ----------------
+
+        public decimal DIS_TOTAL_GP1 { get; set; }
+        public decimal DIS_TOTAL_GP2 { get; set; }
+
+    }
+}

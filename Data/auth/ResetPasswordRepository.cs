@@ -2,7 +2,7 @@ using Microsoft.Extensions.Configuration;
 using itsppisapi.Models;
 using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 using itsppisapi.Dtos;
@@ -21,9 +21,7 @@ namespace itsppisapi.Data
         {
             return new ResetPasswordModel()
             {
-                USER_NAME = reader["USER_NAME"].ToString(),
-                PASSWORD_TEMP = reader["PASSWORD_TEMP"].ToString(),
-                NEW_PASSWORD = reader["NEW_PASSWORD"].ToString(),
+                MSG = reader["MSG"].ToString(),
             };
         }
 

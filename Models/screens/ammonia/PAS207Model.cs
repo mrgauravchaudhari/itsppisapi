@@ -1,0 +1,132 @@
+namespace itsppisapi.Models
+{
+    public class PAS207Model
+    {
+        public string MINDT { get; set; }
+        public string MAXDT { get; set; }
+        public string A2_TRANS_DATE { get; set; }
+        public dynamic A2_PWR_WATER_INT { get; set; }
+        public dynamic A2_PWR_WATER_CONSP { get; set; }
+        public dynamic A2_FW_CONSP_ACT_INT { get; set; }
+        public dynamic A2_FW_CONSP_ACT { get; set; }
+        public dynamic A2_FW_CONSP_UCT_INT { get; set; }
+        public dynamic A2_FW_CONSP_UCT_AMM { get; set; }
+        public dynamic A2_FW_CONSP_UCT { get; set; }
+        public dynamic A2_FW_CONSP_PLANT { get; set; }
+        public dynamic A2_ACT_BLOWDOWN { get; set; }
+        public dynamic A2_UCT_BLOWDOWN { get; set; }
+        public dynamic A2_TOTAL_BLOWDOWN { get; set; }
+        public dynamic A2_PW_GPI_DRAW_INT { get; set; }
+        public dynamic A2_PW_GPI_DRAW { get; set; }
+        public dynamic A2_PW_TANK_LEVEL { get; set; }
+        public dynamic A2_PW_TANK_STOCK { get; set; }
+        public dynamic A2_PW_CONSP_AB_INT { get; set; }
+        public dynamic A2_PW_CONSP_AB_INT_DIFF { get; set; }
+        public dynamic A2_PW_CONSP_DESUP1_INT { get; set; }
+        public dynamic A2_PW_CONSP_DESUP1_INT_DIFF { get; set; }
+        public dynamic A2_PW_CONSP_DESUP2_INT { get; set; }
+        public dynamic A2_PW_CONSP_DESUP2_INT_DIFF { get; set; }
+        public dynamic A2_PW_CONSP_AB { get; set; }
+        public dynamic A2_PW_CONSP_RGB_INT { get; set; }
+        public dynamic A2_PW_CONSP_RGB { get; set; }
+        public dynamic A2_PW_CONSP_DESUPERHEAT_INT { get; set; }
+        public dynamic A2_PW_CONSP_DESUPERHEAT { get; set; }
+        public dynamic A2_PW_CONSP_QUENCH_INT { get; set; }
+        public dynamic A2_PW_CONSP_QUENCH_INT_DIFF { get; set; }
+        public dynamic A2_PW_CONSP_LB_INT { get; set; }
+        public dynamic A2_PW_CONSP_LB { get; set; }
+        public dynamic A2_PW_CONSP_REVAMP { get; set; }
+        public dynamic A2_PW_CONSP_AMM2 { get; set; }
+        public dynamic A2_PW_CONSP_UREA2 { get; set; }
+        public dynamic A2_PW_TOT_CONSP { get; set; }
+        public dynamic A2_APC_PROD_INT { get; set; }
+        public dynamic A2_APC_PROD { get; set; }
+        public dynamic A2_CTTC_PROD_INT { get; set; }
+        public dynamic A2_CTTC_PROD { get; set; }
+        public dynamic A2_ATC_PROD { get; set; }
+        public dynamic A2_ACTTC_PROD { get; set; }
+        public dynamic A2_SSF_BACK_WASH_IBD { get; set; }
+        public dynamic A2_OILY_WATER { get; set; }
+        public dynamic TXT_TOT_ACT_MAKEUP { get; set; }
+        public dynamic TXT_ACT_MAKEUP_SINK { get; set; }
+        public dynamic TXT_ACT_NET_MAKUP { get; set; }
+        public dynamic TXT_SERVICE_WATER { get; set; }
+        public dynamic TXT_DRINKING_WATER { get; set; }
+        public dynamic TXT_FIRE_WATER { get; set; }
+        public dynamic TXT_TOT_NONPLANT_CONSP { get; set; }
+        public dynamic TXT_TOT_PLANT_NONPLANT { get; set; }
+        public dynamic TXT_UPC { get; set; }
+        public dynamic TXT_UTC { get; set; }
+        public dynamic TXT_USC { get; set; }
+        public dynamic TXT_UCTTC { get; set; }
+        public dynamic TXT_ASC { get; set; }
+        public dynamic TXT_TOT_AMM_PLANT { get; set; }
+        public dynamic TXT_TC { get; set; }
+        public dynamic TXT_TOT_SC { get; set; }
+        public dynamic TXT_CONDEN_GP2 { get; set; }
+        public dynamic TXT_DM_WATER { get; set; }
+        public dynamic TXT_REG_LOSS { get; set; }
+        public string A2_DATE_MOD { get; set; }
+        public dynamic A2_USER_ID { get; set; }
+        public string USER_NAME { get; set; }
+
+        // PRV
+        public string PRV_A2_TRANS_DATE { get; set; }
+        public dynamic PRV_A2_PWR_WATER_INT { get; set; }
+        public dynamic PRV_A2_PWR_WATER_CONSP { get; set; }
+        public dynamic PRV_A2_FW_CONSP_ACT_INT { get; set; }
+        public dynamic PRV_A2_FW_CONSP_ACT { get; set; }
+        public dynamic PRV_A2_FW_CONSP_UCT_INT { get; set; }
+        public dynamic PRV_A2_FW_CONSP_UCT_AMM { get; set; }
+        public dynamic PRV_A2_FW_CONSP_UCT { get; set; }
+        public dynamic PRV_A2_FW_CONSP_PLANT { get; set; }
+        public dynamic PRV_A2_ACT_BLOWDOWN { get; set; }
+        public dynamic PRV_A2_UCT_BLOWDOWN { get; set; }
+        public dynamic PRV_A2_TOTAL_BLOWDOWN { get; set; }
+        public dynamic PRV_A2_PW_GPI_DRAW_INT { get; set; }
+        public dynamic PRV_A2_PW_GPI_DRAW { get; set; }
+        public dynamic PRV_A2_PW_TANK_LEVEL { get; set; }
+        public dynamic PRV_A2_PW_TANK_STOCK { get; set; }
+        public dynamic PRV_A2_PW_CONSP_AB_INT { get; set; }
+        public dynamic PRV_A2_PW_CONSP_AB_INT_DIFF { get; set; }
+        public dynamic PRV_A2_PW_CONSP_DESUP1_INT { get; set; }
+        public dynamic PRV_A2_PW_CONSP_DESUP1_INT_DIFF { get; set; }
+        public dynamic PRV_A2_PW_CONSP_DESUP2_INT { get; set; }
+        public dynamic PRV_A2_PW_CONSP_DESUP2_INT_DIFF { get; set; }
+        public dynamic PRV_A2_PW_CONSP_AB { get; set; }
+        public dynamic PRV_A2_PW_CONSP_RGB_INT { get; set; }
+        public dynamic PRV_A2_PW_CONSP_RGB { get; set; }
+        public dynamic PRV_A2_PW_CONSP_DESUPERHEAT_INT { get; set; }
+        public dynamic PRV_A2_PW_CONSP_DESUPERHEAT { get; set; }
+        public dynamic PRV_A2_PW_CONSP_QUENCH_INT { get; set; }
+        public dynamic PRV_A2_PW_CONSP_QUENCH_INT_DIFF { get; set; }
+        public dynamic PRV_A2_PW_CONSP_LB_INT { get; set; }
+        public dynamic PRV_A2_PW_CONSP_LB { get; set; }
+        public dynamic PRV_A2_PW_CONSP_REVAMP { get; set; }
+        public dynamic PRV_A2_PW_CONSP_AMM2 { get; set; }
+        public dynamic PRV_A2_PW_CONSP_UREA2 { get; set; }
+        public dynamic PRV_A2_PW_TOT_CONSP { get; set; }
+        public dynamic PRV_A2_APC_PROD_INT { get; set; }
+        public dynamic PRV_A2_APC_PROD { get; set; }
+        public dynamic PRV_A2_CTTC_PROD_INT { get; set; }
+        public dynamic PRV_A2_CTTC_PROD { get; set; }
+        public dynamic PRV_A2_ATC_PROD { get; set; }
+        public dynamic PRV_A2_ACTTC_PROD { get; set; }
+        public dynamic PRV_A2_SSF_BACK_WASH_IBD { get; set; }
+
+        // DV
+        public dynamic PARM_CF_FW_CONSP_ACT_MAKEUP { get; set; }
+        public dynamic U2_FIRE_CONSP_UCT2 { get; set; }
+        public dynamic parm_oily_effl_etp { get; set; }
+        public dynamic parm_urea2_tot_prod { get; set; }
+        public dynamic parm_urea1_tot_prod { get; set; }
+        public dynamic PARM_MF_PW_DAYTANK { get; set; }
+        public dynamic PARM_PW_DAYTANK_DEAD_STOCK { get; set; }
+        // public dynamic PARM_CF_FW_CONSP_ACT_MAKEUP { get; set; } // repeated field //
+        public dynamic PARM_CF_FW_CONSP_UCT_MAKEUP { get; set; }
+        public dynamic PARM_CF_PW_AB { get; set; }
+        public dynamic parm_proj_start_date { get; set; }
+        public dynamic ln_op_stk { get; set; }
+       // public dynamic parm_urea2_tot_prod { get; set; }// repeated field //
+    }
+}

@@ -10,7 +10,7 @@ using itsppisapi.Models;
 
 namespace itsppisapi.Controllers
 {
-  [Authorize]
+   [Authorize(AuthenticationSchemes = "Bearer")]
   [Route("api/[controller]")]
   [ApiController]
   public class UserProfileController : ControllerBase

@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace itsppisapi.Controllers
 {
-    [Authorize]
+    [Authorize(AuthenticationSchemes = "Bearer")]
     [Route("api/[controller]")]
     [ApiController]
     public class ListUserController : ControllerBase

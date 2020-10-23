@@ -1,0 +1,85 @@
+namespace itsppisapi.Dtos
+{
+    public class PUS002Dto
+    {
+        public string U1_TRANS_DATE { get; set; }
+        public decimal U1_USER_ID { get; set; }
+        public decimal U1_U11_UREA_PROD { get; set; }
+        public decimal U1_U21_UREA_PROD { get; set; }
+        public decimal U1_U11_STREAM_HRS { get; set; }
+        public decimal U1_U21_STREAM_HRS { get; set; }
+        public decimal U1_U11_CO2_CONSP_INT { get; set; }
+        public decimal U1_U11_CO2_CONSP { get; set; }
+        public decimal U1_U21_CO2_CONSP_INT { get; set; }
+        public decimal U1_U21_CO2_CONSP { get; set; }
+        public decimal U1_U11_AMM_CONSP { get; set; }
+        public decimal U1_U21_AMM_CONSP { get; set; }
+        public decimal U1_U11_CAP_UTIL { get; set; }
+        public decimal U1_U21_CAP_UTIL { get; set; }
+        public decimal U1_UREA_CAP_UTIL { get; set; }
+        public decimal U1_KS_EQ_ENG { get; set; }
+        public decimal U1_HS_EQ_ENG { get; set; }
+        public decimal U1_LS_EQ_ENG { get; set; }
+        public decimal U1_BFW_EQ_ENG { get; set; }
+        public decimal U1_U11_ELECTC_EQ_ENG { get; set; }
+        public decimal U1_U21_ELECTC_EQ_ENG { get; set; }
+        public string U1_UCT_ELECTC_EQ_ENG { get; set; }
+        public decimal U1_USC_EQ_ENG { get; set; }
+        public decimal U1_UTC_EQ_ENG { get; set; }
+        public decimal U1_SP_CONSP_KS { get; set; }
+        public decimal U1_SP_CONSP_HS { get; set; }
+        public decimal U1_SP_CONSP_LS { get; set; }
+        public decimal U1_SP_CONSP_BFW { get; set; }
+        public decimal U1_SP_CONSP_TC { get; set; }
+        public decimal U1_SP_CONSP_SC { get; set; }
+        public decimal U1_SP_CONSP_PC { get; set; }
+        public decimal U1_U11_P1_RPM { get; set; }
+        public decimal U1_U21_P1_RPM { get; set; }
+        public decimal U1_TOTAL_ENG_IN { get; set; }
+        public decimal U1_TOTAL_ENG_OUT { get; set; }
+        public decimal U1_NET_ENG_WITH_CT { get; set; }
+        public decimal U1_NET_ENG_WITHOUT_CT { get; set; }
+        public decimal U1_SP_ENG_WITH_CT { get; set; }
+        public decimal U1_SP_ENG_WITHOUT_CT { get; set; }
+        public decimal U1_TOT_UREA_PROD { get; set; }
+        public decimal U1_UTC_PROD_U11_INT { get; set; }
+        public decimal U1_UTC_PROD_U11 { get; set; }
+        public decimal U1_UTC_PROD_U21_INT { get; set; }
+        public decimal U1_UTC_PROD_U21 { get; set; }
+        public decimal U1_UTC_PROD { get; set; }
+        public decimal U1_USC_PROD_INT { get; set; }
+        public decimal U1_USC_PROD { get; set; }
+        public decimal U1_UPC_PROD_INT { get; set; }
+        public decimal U1_UPC_PROD { get; set; }
+        public decimal U1_PW_CONSP_U11_INT { get; set; }
+        public decimal U1_PW_CONSP_U11 { get; set; }
+        public decimal U1_PW_CONSP_U21_INT { get; set; }
+        public decimal U1_PW_CONSP_U21 { get; set; }
+        public decimal U1_PW_CONSP_UREA { get; set; }
+        public decimal U1_KS_CONSP_U11_INT { get; set; }
+        public decimal U1_KS_CONSP_U11 { get; set; }
+        public decimal U1_KS_CONSP_U21_INT { get; set; }
+        public decimal U1_KS_CONSP_U21 { get; set; }
+        public decimal U1_KS_CONSP_UREA { get; set; }
+        public decimal U1_HS_CONSP_UREA_INT { get; set; }
+        public decimal U1_HS_CONSP_UREA { get; set; }
+        public decimal U1_LS_CONSP_UREA { get; set; }
+        //public string U1_FREEZE_FLG { get; set; }
+        //public string U1_FREEZE_TIME { get; set; }
+        public string U1_REMARKS_D { get; set; }
+        public string U1_REMARKS_M { get; set; }
+        public decimal U1_EFF_FACTOR { get; set; }
+        public decimal U1_NO_UREA_SU_SD { get; set; }
+        public string U1_ENG_REMARKS { get; set; }
+        public decimal U1_KS_CONSP_DISOLVE { get; set; }
+        public decimal U1_LS_CONSP_STRIPPER { get; set; }
+        public decimal U1_LS_CONSP_INT { get; set; }
+        public decimal U1_VAM_RUN_HRS { get; set; }
+        public decimal U1_VAM_POWER { get; set; }
+        public decimal U1_EFF_WATER_EXP { get; set; }
+        public decimal U1_TOT_UREA_PROD_SHIFT_A { get; set; }
+        public decimal U1_TOT_UREA_PROD_SHIFT_B { get; set; }
+        public decimal U1_TOT_UREA_PROD_SHIFT_C { get; set; }
+
+    }
+}

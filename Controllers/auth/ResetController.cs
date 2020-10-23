@@ -18,16 +18,15 @@ namespace itsppisapi.Controllers
             this._repository = repository ?? throw new ArgumentNullException(nameof(repository));
         }
         
-        // [HttpPost("username")]
-        // public async Task<ActionResult<ResetModel>> Post(StringParameterDto data)
-        // {
-        //     return await _repository.getData(data);
-        // }
-
         [HttpPut]
-        public async Task<ActionResult<ResetModel>> Put(StringParameterDto data)
+        public async Task<ActionResult<Object>> Put(StringParameterDto data)
         {
-            return await _repository.getData(data);
+            var response = await _repository.getData(data);
+            return new
+            {
+                response.USER_NAME,
+                response.MSG
+            };
         }
     }
 }

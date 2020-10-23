@@ -9,7 +9,7 @@ using itsppisapi.Dtos;
 
 namespace itsppisapi.Controllers
 {
-    [Authorize]
+     [Authorize(AuthenticationSchemes = "Bearer")]
     [Route("api/[controller]")]
     [ApiController]
     public class PLS201Controller : ControllerBase

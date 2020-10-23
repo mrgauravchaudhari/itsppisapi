@@ -1,7 +1,8 @@
 using Microsoft.Extensions.Configuration;
 using itsppisapi.Models;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using System.Threading.Tasks;
+using itsppisapi.Dtos;
 
 namespace itsppisapi.Data
 {
@@ -21,24 +22,27 @@ namespace itsppisapi.Data
                 MAXDT = reader["MAXDT"].ToString(),
                 L_TRANS_DATE = reader["L_TRANS_DATE"].ToString(),
                 L_TIME = reader["L_TIME"].ToString(),
-                L_TEMP = reader["L_TEMP"].ToString(),
-                L_DENSITY = reader["L_DENSITY"].ToString(),
-                L_DENSITY_15C = reader["L_DENSITY_15C"].ToString(),
-                L_BR_NO = reader["L_BR_NO"].ToString(),
-                L_OLEFINES = reader["L_OLEFINES"].ToString(),
-                L_AROMATICS = reader["L_AROMATICS"].ToString(),
-                L_IBP = reader["L_IBP"].ToString(),
-                L_NRA_50 = reader["L_NRA_50"].ToString(),
-                L_NRA_95 = reader["L_NRA_95"].ToString(),
-                L_FBP = reader["L_FBP"].ToString(),
-                L_CH_RATIO = reader["L_CH_RATIO"].ToString(),
-                L_SULPHUR = reader["L_SULPHUR"].ToString(),
-                L_RESIDUE = reader["L_RESIDUE"].ToString(),
-                L_RECOVERY = reader["L_RECOVERY"].ToString(),
-                L_LIQ_REMAIN = reader["L_LIQ_REMAIN"].ToString(),
-                L_LOSS = reader["L_LOSS"].ToString(),
-                L_NET_CV = reader["L_NET_CV"].ToString(),
-                L_GROSS_CV = reader["L_GROSS_CV"].ToString()
+                L_TEMP = (decimal)reader["L_TEMP"],
+                L_DENSITY = (decimal)reader["L_DENSITY"],
+                L_DENSITY_15C = (decimal)reader["L_DENSITY_15C"],
+                L_SULPHUR = (decimal)reader["L_SULPHUR"],
+                L_BR_NO = (decimal)reader["L_BR_NO"],
+                L_OLEFINES = (decimal)reader["L_OLEFINES"],
+                L_AROMATICS = (decimal)reader["L_AROMATICS"],
+                L_IBP = (decimal)reader["L_IBP"],
+                L_NRA_50 = (decimal)reader["L_NRA_50"],
+                L_NRA_95 = (decimal)reader["L_NRA_95"],
+                L_FBP = (decimal)reader["L_FBP"],
+                L_CH_RATIO = (decimal)reader["L_CH_RATIO"],
+                L_RESIDUE = (decimal)reader["L_RESIDUE"],
+                L_RECOVERY = (decimal)reader["L_RECOVERY"],
+                L_LIQ_REMAIN = (decimal)reader["L_LIQ_REMAIN"],
+                L_LOSS = (decimal)reader["L_LOSS"],
+                L_NET_CV = (decimal)reader["L_NET_CV"],
+                L_GROSS_CV = (decimal)reader["L_GROSS_CV"],
+                L_USER_ID = (decimal)reader["L_USER_ID"],
+                L_DATE_MOD = reader["L_DATE_MOD"].ToString(),
+                L_USER_NAME = reader["L_USER_NAME"].ToString()
             };
         }
 
@@ -61,6 +65,43 @@ namespace itsppisapi.Data
                         }
                     }
                     return response;
+                }
+            }
+        }
+
+        public async Task saveData(PLS202SaveDto value)
+        {
+            using (SqlConnection sql = new SqlConnection(_connectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand("PPIS.PPU_P_LB2_SAVE_PPT_LB_NAP_DAYTANK2_ANALYSIS", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                    cmd.Parameters.Add(new SqlParameter("@IN_L_TRANS_DATE", value.L_TRANS_DATE));
+                    cmd.Parameters.Add(new SqlParameter("@IN_L_TIME", value.L_TIME));
+                    cmd.Parameters.Add(new SqlParameter("@IN_L_USER_ID", value.L_USER_ID));
+                    cmd.Parameters.Add(new SqlParameter("@IN_L_TEMP", value.L_TEMP));
+                    cmd.Parameters.Add(new SqlParameter("@IN_L_DENSITY", value.L_DENSITY));
+                    cmd.Parameters.Add(new SqlParameter("@IN_L_DENSITY_15C", value.L_DENSITY_15C));
+                    cmd.Parameters.Add(new SqlParameter("@IN_L_SULPHUR", value.L_SULPHUR));
+                    cmd.Parameters.Add(new SqlParameter("@IN_L_AROMATICS", value.L_AROMATICS));
+                    cmd.Parameters.Add(new SqlParameter("@IN_L_BR_NO", value.L_BR_NO));
+                    cmd.Parameters.Add(new SqlParameter("@IN_L_OLEFINES", value.L_OLEFINES));
+                    cmd.Parameters.Add(new SqlParameter("@IN_L_IBP", value.L_IBP));
+                    cmd.Parameters.Add(new SqlParameter("@IN_L_NRA_50", value.L_NRA_50));
+                    cmd.Parameters.Add(new SqlParameter("@IN_L_NRA_95", value.L_NRA_95));
+                    cmd.Parameters.Add(new SqlParameter("@IN_L_FBP", value.L_FBP));
+                    cmd.Parameters.Add(new SqlParameter("@IN_L_CH_RATIO", value.L_CH_RATIO));
+                    cmd.Parameters.Add(new SqlParameter("@IN_L_RESIDUE", value.L_RESIDUE));
+                    cmd.Parameters.Add(new SqlParameter("@IN_L_RECOVERY", value.L_RECOVERY));
+                    cmd.Parameters.Add(new SqlParameter("@IN_L_LIQ_REMAIN", value.L_LIQ_REMAIN));
+                    cmd.Parameters.Add(new SqlParameter("@IN_L_LOSS", value.L_LOSS));
+                    cmd.Parameters.Add(new SqlParameter("@IN_L_NET_CV", value.L_NET_CV));
+                    cmd.Parameters.Add(new SqlParameter("@IN_L_GROSS_CV", value.L_GROSS_CV));
+
+                    await sql.OpenAsync();
+                    await cmd.ExecuteNonQueryAsync();
+                    return;
                 }
             }
         }

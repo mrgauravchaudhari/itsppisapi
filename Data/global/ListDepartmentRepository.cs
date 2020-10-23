@@ -1,6 +1,6 @@
 using Microsoft.Extensions.Configuration;
 using itsppisapi.Models;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System;

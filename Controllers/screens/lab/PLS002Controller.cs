@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace itsppisapi.Controllers
 {
-    [Authorize]
+    [Authorize(AuthenticationSchemes = "Bearer")]
     [Route("api/[controller]")]
     [ApiController]
 
@@ -25,11 +25,5 @@ namespace itsppisapi.Controllers
         {
             return await _repository.getData();
         }
-
-        // [HttpPost]
-        // public async Task Post(PLS002Model data)
-        // {
-        //     await _repository.saveData(data);
-        // }
     }
 }

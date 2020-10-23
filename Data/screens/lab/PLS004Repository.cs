@@ -2,7 +2,7 @@ using Microsoft.Extensions.Configuration;
 using itsppisapi.Models;
 using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -22,6 +22,7 @@ namespace itsppisapi.Data
             {
                 MINDT = reader["MINDT"].ToString(),
                 MAXDT = reader["MAXDT"].ToString(),
+                L_TRANS_DATE = reader["L_TRANS_DATE"].ToString(),
                 DSP_L_REPORT_NAME = reader["DSP_L_REPORT_NAME"].ToString(),
                 L_REMARK = reader["L_REMARK"].ToString()
             };

@@ -2,7 +2,7 @@ using Microsoft.Extensions.Configuration;
 using itsppisapi.Models;
 using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 using itsppisapi.Dtos;
@@ -208,7 +208,7 @@ namespace itsppisapi.Data
                     cmd.Parameters.Add(new SqlParameter("@IN_E3_RW_RESERVOIR_FEEDER_2_INT", value.E3_RW_RESERVOIR_FEEDER_2_INT));
                     cmd.Parameters.Add(new SqlParameter("@IN_E3_RW_RESERVOIR_FEEDER_2_INT_DIFF", value.E3_RW_RESERVOIR_FEEDER_2_INT_DIFF));
                     cmd.Parameters.Add(new SqlParameter("@IN_E3_RW_RESERVOIR_CONSP", value.E3_RW_RESERVOIR_CONSP));
-                    cmd.Parameters.Add(new SqlParameter("@IN_ENTERD_BY", value.ENTERD_BY));
+                    cmd.Parameters.Add(new SqlParameter("@IN_ENTERED_BY", value.ENTERED_BY));
                     cmd.Parameters.Add(new SqlParameter("@IN_MODIFIED_BY", value.MODIFIED_BY));
                     //cmd.Parameters.Add(new SqlParameter("@IN_ENTERED_DATETIME", value.ENTERED_DATETIME));
                     //cmd.Parameters.Add(new SqlParameter("@IN_MODIFY_DATETIME", value.MODIFY_DATETIME));
@@ -417,7 +417,7 @@ namespace itsppisapi.Data
                 E3_RW_RESERVOIR_FEEDER_2_INT = (decimal)reader["E3_RW_RESERVOIR_FEEDER_2_INT"],
                 E3_RW_RESERVOIR_FEEDER_2_INT_DIFF = (decimal)reader["E3_RW_RESERVOIR_FEEDER_2_INT_DIFF"],
                 E3_RW_RESERVOIR_CONSP = (decimal)reader["E3_RW_RESERVOIR_CONSP"],
-                ENTERD_BY = reader["ENTERD_BY"].ToString(),
+                ENTERED_BY = reader["ENTERED_BY"].ToString(),
                 MODIFIED_BY = reader["MODIFIED_BY"].ToString(),
                 ENTERED_DATETIME = reader["ENTERED_DATETIME"].ToString(),
                 MODIFY_DATETIME = reader["MODIFY_DATETIME"].ToString(),

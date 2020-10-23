@@ -12,6 +12,7 @@ namespace itsppisapi.Models
         public string MODULE_TYPE { get; set; }
         public string ROUTE_LINK { get; set; }
         public string PARENT_MODULE_NAME { get; set; }
+        // public string MODULE_ACCESS_FLG { get; set; }
         public List<PPV_TREEMENU> Categories { get; set; }
         public PPV_TREEMENU()
         {

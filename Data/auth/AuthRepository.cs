@@ -1,9 +1,10 @@
 using System;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using System.Threading.Tasks;
 using itsppisapi.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+
 
 namespace itsppisapi.Data
 {
@@ -18,21 +19,48 @@ namespace itsppisapi.Data
             _connectionString = configuration.GetConnectionString("DBConnection");
         }
 
-        public async Task<PPM_GL_MST_USERS> Login(string USER_NAME, string PASSWORD)
+        private UserProfile MapToValue(SqlDataReader reader)
         {
+            return new UserProfile()
+            {
+                USER_ID = (decimal)reader["USER_ID"],
+                USER_NAME = reader["USER_NAME"].ToString(),
+                ACTIVE_FLAG = reader["ACTIVE_FLAG"].ToString(),
+                PASSWORD_HASH = (byte[])reader["PASSWORD_HASH"],
+                PASSWORD_SALT = (byte[])reader["PASSWORD_SALT"],
+            };
+        }
 
-            var User = await _context.PPM_GL_MST_USERS.FirstOrDefaultAsync(x => x.USER_NAME == USER_NAME);
+        public async Task<UserProfile> Login(string USER_NAME, string PASSWORD)
+        {
+            using (SqlConnection sql = new SqlConnection(_connectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand("PPIS.PPU_P_CHECK_USER", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@IN_USER_NAME", USER_NAME));
+                    UserProfile response = null;
+                    await sql.OpenAsync();
+                    using (var reader = await cmd.ExecuteReaderAsync())
+                    {
+                        while (await reader.ReadAsync())
+                        {
+                            response = MapToValue(reader);
+                        }
+                    }
+                    if (response == null)
+                        return null;
 
-            if (User == null)
-                return null;
+                    if (response.ACTIVE_FLAG == "I")
+                        return null;
+                    //byte[] passwordHash, passwordSalt;
 
-            if (User.ACTIVE_FLAG == "I")
-                return null;
+                    if (!VerifyPasswordHash(PASSWORD, response.PASSWORD_HASH, response.PASSWORD_SALT))
+                        return null;
 
-            if (!VerifyPasswordHash(PASSWORD, User.PASSWORD_HASH, User.PASSWORD_SALT))
-                return null;
-
-            return User;
+                    return response;
+                }
+            }
         }
 
         private bool VerifyPasswordHash(string PASSWORD, byte[] PASSWORD_HASH, byte[] PASSWORD_SALT)
@@ -66,9 +94,11 @@ namespace itsppisapi.Data
                     cmd.Parameters.Add(new SqlParameter("@IN_USER_PHONE_NO", user.USER_PHONE_NO));
                     cmd.Parameters.Add(new SqlParameter("@IN_USER_EMAIL", user.USER_EMAIL));
                     cmd.Parameters.Add(new SqlParameter("@IN_ACTIVE_FLAG", user.ACTIVE_FLAG));
-                    cmd.Parameters.Add(new SqlParameter("@IN_ENTERED_BY", 1));
+                    cmd.Parameters.Add(new SqlParameter("@IN_ENTERED_BY", user.ENTERED_BY));
+                    cmd.Parameters.Add(new SqlParameter("@IN_MODIFIED_BY", user.MODIFIED_BY));
                     cmd.Parameters.Add(new SqlParameter("@IN_PASSWORD_HASH", passwordHash));
                     cmd.Parameters.Add(new SqlParameter("@IN_PASSWORD_SALT", passwordSalt));
+             
                     await sql.OpenAsync();
                     await cmd.ExecuteNonQueryAsync();
                     return user;
@@ -89,6 +119,23 @@ namespace itsppisapi.Data
         {
             USER_NAME = USER_NAME.ToLower();
             if (await _context.PPM_GL_MST_USERS.AnyAsync(x => x.USER_NAME == USER_NAME))
+                return true;
+
+            return false;
+        }
+
+        public async Task<bool> UserEPRNOExists(decimal USER_EPR_NO)
+        {
+            if (await _context.PPM_GL_MST_USERS.AnyAsync(x => x.USER_EPR_NO == USER_EPR_NO))
+                return true;
+
+            return false;
+        }
+
+        public async Task<bool> UserResetStatus(string USER_NAME)
+        {
+            USER_NAME = USER_NAME.ToLower();
+            if (await _context.PPM_GL_MST_USERS.AnyAsync(x => x.USER_NAME == USER_NAME && x.PASSWORD_FLAG == "OTP"))
                 return true;
 
             return false;

@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace itsppisapi.Controllers
 {
-    [Authorize]
+     [Authorize(AuthenticationSchemes = "Bearer")]
     [Route("api/[controller]")]
     [ApiController]
     public class PLS007Controller : ControllerBase
@@ -23,6 +23,12 @@ namespace itsppisapi.Controllers
         public async Task<ActionResult<PLS007Model>> Put(StringParamWbtnDto data)
         {
             return await _repository.putData(data.StringParameter, data.Btn);
+        }
+
+        [HttpPost]
+        public async Task Post(PLS007SaveDto data)
+        {
+            await _repository.saveData(data);
         }
     }
 }

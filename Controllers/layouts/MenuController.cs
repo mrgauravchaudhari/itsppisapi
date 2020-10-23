@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace itsppisapi.Controllers
 {
-    [Authorize]
+    [Authorize(AuthenticationSchemes = "Bearer")]
     [Route("api/[controller]")]
     [ApiController]
     public class MenuController : ControllerBase
@@ -21,7 +21,16 @@ namespace itsppisapi.Controllers
         {
             this._repository = repository ?? throw new ArgumentNullException(nameof(repository));
         }
-        // GET api/Menu
+
+        // GET api/Menu/routes
+        [HttpPut]
+        [Route("route")]
+        public async Task<ActionResult<IEnumerable<PPV_ROUTEMENU>>> PutRoute(NumberParameterDto data)
+        {
+            return await _repository.GetAllRoutes(data);
+        }
+
+        // GET api/Menu/tree
         [HttpPut]
         public async Task<ActionResult<IEnumerable<PPV_TREEMENU>>> Put(NumberParameterDto data)
         {
