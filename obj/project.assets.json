@@ -12484,11 +12484,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\PROJECTS\\itsppisapi\\itsppisapi.csproj",
+      "projectUniqueName": "C:\\PROJECTS\\github\\itsppisapi\\itsppisapi.csproj",
       "projectName": "itsppisapi",
-      "projectPath": "C:\\PROJECTS\\itsppisapi\\itsppisapi.csproj",
+      "projectPath": "C:\\PROJECTS\\github\\itsppisapi\\itsppisapi.csproj",
       "packagesPath": "C:\\Users\\ITS\\.nuget\\packages\\",
-      "outputPath": "C:\\PROJECTS\\itsppisapi\\obj\\",
+      "outputPath": "C:\\PROJECTS\\github\\itsppisapi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
