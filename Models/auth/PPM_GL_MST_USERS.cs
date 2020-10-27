@@ -26,5 +26,6 @@ namespace itsppisapi.Models
         public byte[] PASSWORD_HASH { get; set; }
         public byte[] PASSWORD_SALT { get; set; }
         public string PASSWORD_FLAG { get; set; }
+        public DateTime USER_VALIDITY_DT { get; set; }
     }
 }

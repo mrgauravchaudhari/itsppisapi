@@ -79,13 +79,20 @@ namespace itsppisapi.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login(UserForLoginDto userForLoginDto)
         {
-            if (await _repository.UserResetStatus(userForLoginDto.USER_NAME))
+            var ResetStatus = await _repository.UserResetStatus(userForLoginDto.USER_NAME);
+
+            if(ResetStatus == true)
                 return BadRequest("Reset Pending.");
 
             var userFromRepository = await _repository.Login(userForLoginDto.USER_NAME, userForLoginDto.PASSWORD);
 
             if (userFromRepository == null)
                 return Unauthorized();
+
+            var ValidityStatus = await _repository.UserValidityStatus(userForLoginDto.USER_NAME);
+
+            if (ValidityStatus == true)
+                return BadRequest("Validity Pass.");
 
             var claims = new[] {
                 new Claim (ClaimTypes.NameIdentifier, userFromRepository.USER_ID.ToString ()),

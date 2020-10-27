@@ -11,5 +11,6 @@ namespace itsppisapi.Data
         Task<bool> UserExists(string UserName);
         Task<bool> UserEPRNOExists(decimal UserEprno);
         Task<bool> UserResetStatus(string UserName);
+        Task<bool> UserValidityStatus(string UserName);
     }
 }

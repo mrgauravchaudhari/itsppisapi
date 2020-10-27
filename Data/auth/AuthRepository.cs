@@ -5,7 +5,6 @@ using itsppisapi.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
-
 namespace itsppisapi.Data
 {
     public class AuthRepository : IAuthRepository
@@ -98,7 +97,7 @@ namespace itsppisapi.Data
                     cmd.Parameters.Add(new SqlParameter("@IN_MODIFIED_BY", user.MODIFIED_BY));
                     cmd.Parameters.Add(new SqlParameter("@IN_PASSWORD_HASH", passwordHash));
                     cmd.Parameters.Add(new SqlParameter("@IN_PASSWORD_SALT", passwordSalt));
-             
+
                     await sql.OpenAsync();
                     await cmd.ExecuteNonQueryAsync();
                     return user;
@@ -139,6 +138,22 @@ namespace itsppisapi.Data
                 return true;
 
             return false;
+        }
+
+        public async Task<bool> UserValidityStatus(string USER_NAME)
+        {
+            USER_NAME = USER_NAME.ToLower();
+            if (await _context.PPM_GL_MST_USERS.AnyAsync(x => x.USER_NAME == USER_NAME && x.USER_VALIDITY_DT != null))
+            {
+                if (await _context.PPM_GL_MST_USERS.AnyAsync(y => y.USER_NAME == USER_NAME && y.USER_VALIDITY_DT.ToString("yyyy-MM-dd") == DateTime.Now.ToString("yyyy-MM-dd")))
+                    return true;
+
+                return false;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         //public async Task<UserProfile> Profile(string USER_NAME)
