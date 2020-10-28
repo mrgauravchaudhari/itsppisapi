@@ -24,7 +24,7 @@ Project_Readme.html
 # Project file
 *bin
 *obj
-appsettings.json
+*appsettings.json
 *Program.csde
 *properties/launchSettings.json
 

@@ -1,10 +1,9 @@
-using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace itsppisapi.Models
 {
-    [Table("PPM_GL_MODULE", Schema="PPIS")]
+    [Table("PPM_GL_MODULE", Schema = "PPIS")]
     public partial class PPV_TREEMENU
     {
         public string MODULE_NAME { get; set; }

@@ -1,16 +1,15 @@
-using System;
-using System.IdentityModel.Tokens.Jwt;
-using System.Net.Mail;
-using System.Security.Claims;
-using System.Text;
-using System.Threading.Tasks;
 using itsppisapi.Data;
 using itsppisapi.Dtos;
+using itsppisapi.Helpers;
 using itsppisapi.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
-using itsppisapi.Helpers;
+using System;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace itsppisapi.Controllers
 {

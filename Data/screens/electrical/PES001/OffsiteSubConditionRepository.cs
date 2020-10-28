@@ -1,138 +1,138 @@
-using Microsoft.Extensions.Configuration;
 using itsppisapi.Dtos;
 using itsppisapi.Models;
-using System.Collections.Generic;
 using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace itsppisapi.Data
 {
-  public class OffsiteSubConditionRepository
-  {
-    private readonly string _connectionString;
-    public OffsiteSubConditionRepository(IConfiguration configuration)
+    public class OffsiteSubConditionRepository
     {
-      _connectionString = configuration.GetConnectionString("DBConnection");
-    }
-
-    private OffsiteSubConditionModel MapToValue(SqlDataReader reader) => new OffsiteSubConditionModel()
-    {
-      E_COND_ID = (decimal)reader["E_COND_ID"],
-      E_SUB_COND_ID = (decimal)reader["E_SUB_COND_ID"],
-      E_SUB_COND_DESC = reader["E_SUB_COND_DESC"].ToString(),
-      E_ACT_PERCENT = (decimal)reader["E_ACT_PERCENT"],
-      E_UCT_PERCENT = (decimal)reader["E_UCT_PERCENT"],
-      E_WPT_PERCENT = (decimal)reader["E_WPT_PERCENT"],
-      E_DM_PERCENT = (decimal)reader["E_DM_PERCENT"],
-      E_IAC_PERCENT = (decimal)reader["E_IAC_PERCENT"],
-      E_ETP_PERCENT = (decimal)reader["E_ETP_PERCENT"],
-      E_FS_PERCENT = (decimal)reader["E_FS_PERCENT"],
-      E_DATE_MOD = reader["E_DATE_MOD"].ToString(),
-      E_USER_ID = reader["E_USER_ID"].ToString()
-    };
-
-    private OffsiteSubConditionModel MapToValueCondList(SqlDataReader reader) => new OffsiteSubConditionModel()
-    {
-      E_COND_ID = (decimal)reader["E_COND_ID"],
-      E_COND = reader["E_COND"].ToString()
-    };
-
-    private OffsiteSubConditionModel MapToValueSubCondList(SqlDataReader reader) => new OffsiteSubConditionModel()
-    {
-      E_COND_ID = (decimal)reader["E_COND_ID"],
-      E_SUB_COND_ID = (decimal)reader["E_SUB_COND_ID"],
-      E_SUB_COND_DESC = reader["E_SUB_COND_DESC"].ToString()
-    };
-
-    public async Task<List<OffsiteSubConditionModel>> getData()
-    {
-      using (SqlConnection sql = new SqlConnection(_connectionString))
-      {
-        using (SqlCommand cmd = new SqlCommand("PPIS.PPU_P_EL1_GET_PPM_EL_OFFSITE_CONDITION", sql))
+        private readonly string _connectionString;
+        public OffsiteSubConditionRepository(IConfiguration configuration)
         {
-          cmd.CommandType = System.Data.CommandType.StoredProcedure;
-          //cmd.Parameters.Add(new SqlParameter("@parameter", parameter));
-          var response = new List<OffsiteSubConditionModel>();
-          await sql.OpenAsync();
-          using (var reader = await cmd.ExecuteReaderAsync())
-          {
-            while (await reader.ReadAsync())
+            _connectionString = configuration.GetConnectionString("DBConnection");
+        }
+
+        private OffsiteSubConditionModel MapToValue(SqlDataReader reader) => new OffsiteSubConditionModel()
+        {
+            E_COND_ID = (decimal)reader["E_COND_ID"],
+            E_SUB_COND_ID = (decimal)reader["E_SUB_COND_ID"],
+            E_SUB_COND_DESC = reader["E_SUB_COND_DESC"].ToString(),
+            E_ACT_PERCENT = (decimal)reader["E_ACT_PERCENT"],
+            E_UCT_PERCENT = (decimal)reader["E_UCT_PERCENT"],
+            E_WPT_PERCENT = (decimal)reader["E_WPT_PERCENT"],
+            E_DM_PERCENT = (decimal)reader["E_DM_PERCENT"],
+            E_IAC_PERCENT = (decimal)reader["E_IAC_PERCENT"],
+            E_ETP_PERCENT = (decimal)reader["E_ETP_PERCENT"],
+            E_FS_PERCENT = (decimal)reader["E_FS_PERCENT"],
+            E_DATE_MOD = reader["E_DATE_MOD"].ToString(),
+            E_USER_ID = reader["E_USER_ID"].ToString()
+        };
+
+        private OffsiteSubConditionModel MapToValueCondList(SqlDataReader reader) => new OffsiteSubConditionModel()
+        {
+            E_COND_ID = (decimal)reader["E_COND_ID"],
+            E_COND = reader["E_COND"].ToString()
+        };
+
+        private OffsiteSubConditionModel MapToValueSubCondList(SqlDataReader reader) => new OffsiteSubConditionModel()
+        {
+            E_COND_ID = (decimal)reader["E_COND_ID"],
+            E_SUB_COND_ID = (decimal)reader["E_SUB_COND_ID"],
+            E_SUB_COND_DESC = reader["E_SUB_COND_DESC"].ToString()
+        };
+
+        public async Task<List<OffsiteSubConditionModel>> getData()
+        {
+            using (SqlConnection sql = new SqlConnection(_connectionString))
             {
-              response.Add(MapToValue(reader));
+                using (SqlCommand cmd = new SqlCommand("PPIS.PPU_P_EL1_GET_PPM_EL_OFFSITE_CONDITION", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    //cmd.Parameters.Add(new SqlParameter("@parameter", parameter));
+                    var response = new List<OffsiteSubConditionModel>();
+                    await sql.OpenAsync();
+                    using (var reader = await cmd.ExecuteReaderAsync())
+                    {
+                        while (await reader.ReadAsync())
+                        {
+                            response.Add(MapToValue(reader));
+                        }
+                    }
+                    return response;
+                }
             }
-          }
-          return response;
         }
-      }
-    }
 
-    public async Task<List<OffsiteSubConditionModel>> getCondList()
-    {
-      using (SqlConnection sql = new SqlConnection(_connectionString))
-      {
-        using (SqlCommand cmd = new SqlCommand("PPIS.PPU_P_EL1_GET_PPM_EL_OFFSITE_CONDITION_DSP_E_COND", sql))
+        public async Task<List<OffsiteSubConditionModel>> getCondList()
         {
-          cmd.CommandType = System.Data.CommandType.StoredProcedure;
-          //cmd.Parameters.Add(new SqlParameter("@parameter", parameter));
-          var response = new List<OffsiteSubConditionModel>();
-          await sql.OpenAsync();
-          using (var reader = await cmd.ExecuteReaderAsync())
-          {
-            while (await reader.ReadAsync())
+            using (SqlConnection sql = new SqlConnection(_connectionString))
             {
-              response.Add(MapToValueCondList(reader));
+                using (SqlCommand cmd = new SqlCommand("PPIS.PPU_P_EL1_GET_PPM_EL_OFFSITE_CONDITION_DSP_E_COND", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    //cmd.Parameters.Add(new SqlParameter("@parameter", parameter));
+                    var response = new List<OffsiteSubConditionModel>();
+                    await sql.OpenAsync();
+                    using (var reader = await cmd.ExecuteReaderAsync())
+                    {
+                        while (await reader.ReadAsync())
+                        {
+                            response.Add(MapToValueCondList(reader));
+                        }
+                    }
+                    return response;
+                }
             }
-          }
-          return response;
         }
-      }
-    }
 
-    public async Task saveData(OffsiteSubConditionDto value)
-    {
-      using (SqlConnection sql = new SqlConnection(_connectionString))
-      {
-        using (SqlCommand cmd = new SqlCommand("PPIS.PPU_P_EL1_SAVE_PPM_EL_OFFSITE_CONDITION", sql))
+        public async Task saveData(OffsiteSubConditionDto value)
         {
-          cmd.CommandType = System.Data.CommandType.StoredProcedure;
-          cmd.Parameters.Add(new SqlParameter("@IN_E_COND_ID", value.E_COND_ID));
-          cmd.Parameters.Add(new SqlParameter("@IN_E_SUB_COND_ID", value.E_SUB_COND_ID));
-          cmd.Parameters.Add(new SqlParameter("@IN_E_FS_PERCENT", value.E_FS_PERCENT));
-          cmd.Parameters.Add(new SqlParameter("@IN_E_SUB_COND_DESC", value.E_SUB_COND_DESC));
-          cmd.Parameters.Add(new SqlParameter("@IN_E_ACT_PERCENT", value.E_ACT_PERCENT));
-          cmd.Parameters.Add(new SqlParameter("@IN_E_UCT_PERCENT", value.E_UCT_PERCENT));
-          cmd.Parameters.Add(new SqlParameter("@IN_E_WPT_PERCENT", value.E_WPT_PERCENT));
-          cmd.Parameters.Add(new SqlParameter("@IN_E_DM_PERCENT", value.E_DM_PERCENT));
-          cmd.Parameters.Add(new SqlParameter("@IN_E_ETP_PERCENT", value.E_ETP_PERCENT));
-          cmd.Parameters.Add(new SqlParameter("@IN_E_IAC_PERCENT", value.E_IAC_PERCENT));
-          cmd.Parameters.Add(new SqlParameter("@IN_E_USER_ID", value.E_USER_ID));
-          await sql.OpenAsync();
-          await cmd.ExecuteNonQueryAsync();
-          return;
-        }
-      }
-    }
-
-    public async Task<List<OffsiteSubConditionModel>> getSubCondList()
-    {
-      using (SqlConnection sql = new SqlConnection(_connectionString))
-      {
-        using (SqlCommand cmd = new SqlCommand("PPIS.PPU_P_EL1_GET_PPM_EL_OFFSITE_CONDITION_DSP_E_SUB_COND", sql))
-        {
-          cmd.CommandType = System.Data.CommandType.StoredProcedure;
-          //cmd.Parameters.Add(new SqlParameter("@parameter", parameter));
-          var response = new List<OffsiteSubConditionModel>();
-          await sql.OpenAsync();
-          using (var reader = await cmd.ExecuteReaderAsync())
-          {
-            while (await reader.ReadAsync())
+            using (SqlConnection sql = new SqlConnection(_connectionString))
             {
-              response.Add(MapToValueSubCondList(reader));
+                using (SqlCommand cmd = new SqlCommand("PPIS.PPU_P_EL1_SAVE_PPM_EL_OFFSITE_CONDITION", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@IN_E_COND_ID", value.E_COND_ID));
+                    cmd.Parameters.Add(new SqlParameter("@IN_E_SUB_COND_ID", value.E_SUB_COND_ID));
+                    cmd.Parameters.Add(new SqlParameter("@IN_E_FS_PERCENT", value.E_FS_PERCENT));
+                    cmd.Parameters.Add(new SqlParameter("@IN_E_SUB_COND_DESC", value.E_SUB_COND_DESC));
+                    cmd.Parameters.Add(new SqlParameter("@IN_E_ACT_PERCENT", value.E_ACT_PERCENT));
+                    cmd.Parameters.Add(new SqlParameter("@IN_E_UCT_PERCENT", value.E_UCT_PERCENT));
+                    cmd.Parameters.Add(new SqlParameter("@IN_E_WPT_PERCENT", value.E_WPT_PERCENT));
+                    cmd.Parameters.Add(new SqlParameter("@IN_E_DM_PERCENT", value.E_DM_PERCENT));
+                    cmd.Parameters.Add(new SqlParameter("@IN_E_ETP_PERCENT", value.E_ETP_PERCENT));
+                    cmd.Parameters.Add(new SqlParameter("@IN_E_IAC_PERCENT", value.E_IAC_PERCENT));
+                    cmd.Parameters.Add(new SqlParameter("@IN_E_USER_ID", value.E_USER_ID));
+                    await sql.OpenAsync();
+                    await cmd.ExecuteNonQueryAsync();
+                    return;
+                }
             }
-          }
-          return response;
         }
-      }
+
+        public async Task<List<OffsiteSubConditionModel>> getSubCondList()
+        {
+            using (SqlConnection sql = new SqlConnection(_connectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand("PPIS.PPU_P_EL1_GET_PPM_EL_OFFSITE_CONDITION_DSP_E_SUB_COND", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    //cmd.Parameters.Add(new SqlParameter("@parameter", parameter));
+                    var response = new List<OffsiteSubConditionModel>();
+                    await sql.OpenAsync();
+                    using (var reader = await cmd.ExecuteReaderAsync())
+                    {
+                        while (await reader.ReadAsync())
+                        {
+                            response.Add(MapToValueSubCondList(reader));
+                        }
+                    }
+                    return response;
+                }
+            }
+        }
     }
-  }
 }

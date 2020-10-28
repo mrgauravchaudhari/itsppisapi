@@ -1,5 +1,7 @@
-namespace itsppisapi.Dtos {
-    public class PUS204Dto {
+namespace itsppisapi.Dtos
+{
+    public class PUS204Dto
+    {
         public string U2_TRANS_DATE { get; set; }
         public string U2_DMY_FLG { get; set; }
         public decimal U2_USER_ID { get; set; }

@@ -1,4 +1,3 @@
-using itsppisapi.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace itsppisapi.Models

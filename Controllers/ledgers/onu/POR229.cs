@@ -1,10 +1,9 @@
-﻿using System;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using System.Data;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Data;
+using System.Threading.Tasks;
 
 namespace cfclapi.Controllers.ledgers.electrical
 {
@@ -27,7 +26,7 @@ namespace cfclapi.Controllers.ledgers.electrical
         {
             try
             {
-               string strqry = "PPIS.PPU_P_OU2_YL_COMP_WATER_CONS_DIST_GPI_POR229";
+                string strqry = "PPIS.PPU_P_OU2_YL_COMP_WATER_CONS_DIST_GPI_POR229";
 
                 _connectionString = _context.Database.GetDbConnection().ConnectionString.ToString();
 

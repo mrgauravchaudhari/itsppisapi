@@ -12,7 +12,7 @@ namespace itsppisapi.Models
         public string B_FROM_DATE { get; set; }
         public string B_TO_DATE { get; set; }
 
-        
+
         public string B_DATE_MOD { get; set; }
         public string B_USER_NAME { get; set; }
     }

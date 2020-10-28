@@ -267,7 +267,7 @@ namespace itsppisapi.Models
         public decimal PRV_A3_NG_FUEL_TO_SUPRHEATER_INT { get; set; }
         public decimal PRV_A3_NG_FUEL_TO_STATUPHEATER_INT { get; set; }
         public decimal PRV_A3_NG_FEED_INT { get; set; }
-       
+
         // ------------------------------PPT_AM3_NG_SHEET2---------------------------------------
         public decimal A3_GAIL_METER_A_INT { get; set; }
         public decimal A3_GAIL_METER_B_INT { get; set; }
@@ -307,7 +307,7 @@ namespace itsppisapi.Models
         public decimal A3_FALL_BACK_GAS_RECEIPT { get; set; }
         public decimal DIS_NG_CONS_GTG3_HRSG3 { get; set; }
 
-         // --------PRIORITY-------------------
+        // --------PRIORITY-------------------
         public string A3_GSPN_SPOT_RLING_MMBTU_PRIORITY { get; set; }
         public string A3_GAIL_LT_RLING_1_9_MMBTU_PRIORITY { get; set; }
         public string A3_GAIL_LT_RLING_0_5_MMBTU_PRIORITY { get; set; }
@@ -614,7 +614,7 @@ namespace itsppisapi.Models
     {
         public dynamic NCV_GP3 { get; set; }
     }
-     public class FuncNcvOnuNgModel
+    public class FuncNcvOnuNgModel
     {
         public dynamic NCV_ONU_NG { get; set; }
     }

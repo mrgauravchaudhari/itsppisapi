@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.Data.SqlClient;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace itsppisapi.Models
+﻿namespace itsppisapi.Models
 {
     public class PLS002Model
     {

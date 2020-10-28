@@ -4,7 +4,7 @@ namespace itsppisapi.Dtos
     {
         public string A1_TRANS_DATE { get; set; }
         public decimal A1_USER_ID { get; set; }
-        public decimal A1_MISC2_HRS { get; set; }   
+        public decimal A1_MISC2_HRS { get; set; }
         public decimal A1_TRIP_TYPE_ID { get; set; }
         public decimal A1_SHUTDOWN_HRS { get; set; }
         public string A1_BRKDOWN_REASON { get; set; }

@@ -98,7 +98,7 @@ namespace itsppisapi.Models
         public dynamic TXT_IMP_KS_GP1 { get; set; }
         public dynamic TXT_LET_DWN_SH { get; set; }
         public dynamic TXT_LET_DWN_SM { get; set; }
-         public dynamic TXT_IMP_LS_GP1 { get; set; }
+        public dynamic TXT_IMP_LS_GP1 { get; set; }
         public string A2_DATE_MOD { get; set; }
         public dynamic A2_USER_ID { get; set; }
         public string USER_NAME { get; set; }

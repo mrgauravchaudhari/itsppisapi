@@ -1,5 +1,7 @@
-namespace itsppisapi.Dtos {
-    public class BagDailyDltsSaveDto {
+namespace itsppisapi.Dtos
+{
+    public class BagDailyDltsSaveDto
+    {
         public string B_TRANS_DATE { get; set; }
         public string B_UNIT_ID { get; set; }
         public string TXT_BAG_TYPE { get; set; }
@@ -26,7 +28,8 @@ namespace itsppisapi.Dtos {
         public decimal B_BAG_DESP_ROAD_PF2 { get; set; }
         public decimal B_EMPTY_BAG_STOCK_ADJ { get; set; }
     }
-    public class BagDltsSaveDto {
+    public class BagDltsSaveDto
+    {
         public string B_TRANS_DATE { get; set; }
         public string B_UNIT_ID { get; set; }
         public decimal B_USER_ID { get; set; }

@@ -1,5 +1,7 @@
-namespace itsppisapi.Dtos {
-    public class PGS011SaveDto {
+namespace itsppisapi.Dtos
+{
+    public class PGS011SaveDto
+    {
         public string MODULE_NAME { get; set; }
         public string MODULE_DESC { get; set; }
         public string MODULE_TYPE { get; set; }

@@ -1,8 +1,6 @@
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using System.Net.Mail;
 using System.Text;
-using itsppisapi.Helpers;
 
 namespace itsppisapi.Helpers
 {

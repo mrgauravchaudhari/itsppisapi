@@ -1,11 +1,8 @@
-using Microsoft.Extensions.Configuration;
 using itsppisapi.Models;
-using System;
-using System.Collections.Generic;
 using Microsoft.Data.SqlClient;
-using System.Linq;
+using Microsoft.Extensions.Configuration;
+using System.Collections.Generic;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 
 namespace itsppisapi.Data
 {
@@ -38,7 +35,7 @@ namespace itsppisapi.Data
             };
         }
 
-        public async Task<List<PLS203Model>> putData(string IN_DATE,char IN_BTN)
+        public async Task<List<PLS203Model>> putData(string IN_DATE, char IN_BTN)
         {
             using (SqlConnection sql = new SqlConnection(_connectionString))
             {

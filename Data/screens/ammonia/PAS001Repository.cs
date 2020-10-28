@@ -1,8 +1,8 @@
-using Microsoft.Extensions.Configuration;
+using itsppisapi.Dtos;
 using itsppisapi.Models;
 using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
 using System.Threading.Tasks;
-using itsppisapi.Dtos;
 
 namespace itsppisapi.Data
 {
@@ -77,7 +77,7 @@ namespace itsppisapi.Data
                 A1_NG_CONSP_AMM = (dynamic)reader["A1_NG_CONSP_AMM"],
                 A1_BAL_NG_CONSP_FEED_REFMR = (dynamic)reader["A1_BAL_NG_CONSP_FEED_REFMR"],
                 A1_NG_RECPT = (dynamic)reader["A1_NG_RECPT"],
-                A1_NG_LIMITATION_FLG =reader["A1_NG_LIMITATION_FLG"].ToString(),
+                A1_NG_LIMITATION_FLG = reader["A1_NG_LIMITATION_FLG"].ToString(),
                 A1_ACTL_NG_CV_NET = (dynamic)reader["A1_ACTL_NG_CV_NET"],
                 A1_RLNG_GCV = (dynamic)reader["A1_RLNG_GCV"],
                 A1_MOL_WT_NG = (dynamic)reader["A1_MOL_WT_NG"],
@@ -268,7 +268,7 @@ namespace itsppisapi.Data
                 PRIORITY_TAG14 = reader["PRIORITY_TAG14"].ToString(),
                 PRIORITY_TAG15 = reader["PRIORITY_TAG15"].ToString(),
 
-               // // // PRV
+                // // // PRV
                 PRV_A1_TRANS_DATE = reader["PRV_A1_TRANS_DATE"].ToString(),
                 PRV_A1_PRS_NG_FEED_REFMR_INT = (dynamic)reader["PRV_A1_PRS_NG_FEED_REFMR_INT"],
                 PRV_A1_PRS_NG_FEED_REFMR_INT_DIFF = (dynamic)reader["PRV_A1_PRS_NG_FEED_REFMR_INT_DIFF"],
@@ -611,8 +611,8 @@ namespace itsppisapi.Data
 
                     cmd.Parameters.Add(new SqlParameter("@IN_A1_TRANS_DATE", value.A1_TRANS_DATE));
                     cmd.Parameters.Add(new SqlParameter("@IN_A1_USER_ID", value.A1_USER_ID));
-                 //   cmd.Parameters.Add(new SqlParameter("@IN_A1_FREEZE_FLG", value.A1_FREEZE_FLG));
-                 //   cmd.Parameters.Add(new SqlParameter("@IN_A1_FREEZE_TIME", value.A1_FREEZE_TIME));
+                    //   cmd.Parameters.Add(new SqlParameter("@IN_A1_FREEZE_FLG", value.A1_FREEZE_FLG));
+                    //   cmd.Parameters.Add(new SqlParameter("@IN_A1_FREEZE_TIME", value.A1_FREEZE_TIME));
                     cmd.Parameters.Add(new SqlParameter("@IN_A1_REMARKS_D", value.A1_REMARKS_D));
                     cmd.Parameters.Add(new SqlParameter("@IN_A1_REMARKS_M", value.A1_REMARKS_M));
                     cmd.Parameters.Add(new SqlParameter("@IN_A1_GAIL_METER_ONLINE", value.A1_GAIL_METER_ONLINE));

@@ -1,14 +1,14 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.Data;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Data;
+using System.Threading.Tasks;
 
 namespace cfclapi.Controllers.ledgers.electrical
 {
-     [Authorize(AuthenticationSchemes = "Bearer")]
+    [Authorize(AuthenticationSchemes = "Bearer")]
     [Route("api/[controller]")]
     [ApiController]
 
@@ -27,7 +27,7 @@ namespace cfclapi.Controllers.ledgers.electrical
         {
             try
             {
-               string strqry = "PPIS.PPU_P_OU1_ML_NG_CF_CALC_SHEET_AUX_BOILERS_POR045";
+                string strqry = "PPIS.PPU_P_OU1_ML_NG_CF_CALC_SHEET_AUX_BOILERS_POR045";
 
                 _connectionString = _context.Database.GetDbConnection().ConnectionString.ToString();
 

@@ -25,7 +25,7 @@ namespace itsppisapi.Dtos
     {
         public string TDATE { get; set; }
         public decimal A3_USER_ID { get; set; }
-        
+
         public string A3_DATE_TIME_FROM { get; set; }
         public decimal A3_BRKDWN_CAUSE_ID { get; set; }
         public decimal A3_BRKDWN_HRS { get; set; }

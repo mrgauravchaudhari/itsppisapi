@@ -1,16 +1,16 @@
-using System;
-using System.Threading.Tasks;
-using itsppisapi.Models;
-using Microsoft.AspNetCore.Mvc;
 using itsppisapi.Data;
 using itsppisapi.Dtos;
-using Microsoft.AspNetCore.Authorization;
-using System.Collections.Generic;
+using itsppisapi.Models;
 using itsppisapi.SaveDtos;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace itsppisapi.Controllers
 {
-     [Authorize(AuthenticationSchemes = "Bearer")]
+    [Authorize(AuthenticationSchemes = "Bearer")]
     [Route("api/[controller]")]
     [ApiController]
     public class POS001Controller : ControllerBase

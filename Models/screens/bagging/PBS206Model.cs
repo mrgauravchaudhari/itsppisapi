@@ -1,5 +1,7 @@
-namespace itsppisapi.Models {
-    public class BagDailyDlts {
+namespace itsppisapi.Models
+{
+    public class BagDailyDlts
+    {
         public string MINDT { get; set; }
         public string MAXDT { get; set; }
         public string B_TRANS_DATE { get; set; }
@@ -40,11 +42,13 @@ namespace itsppisapi.Models {
         public decimal PF2_STOCK_ADJST_CONST { get; set; }
         public decimal STOCK_ADJST_CONST { get; set; }
     }
-    public class BagTypeNSize {
+    public class BagTypeNSize
+    {
         public string B_BAG_TYPE { get; set; }
         public string B_BAG_SIZE { get; set; }
     }
-    public class BagDlts {
+    public class BagDlts
+    {
         public string MINDT { get; set; }
         public string MAXDT { get; set; }
         public string B_TRANS_DATE { get; set; }

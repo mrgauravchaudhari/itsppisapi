@@ -1,11 +1,8 @@
-using Microsoft.Extensions.Configuration;
-using itsppisapi.Models;
-using System;
-using System.Collections.Generic;
-using Microsoft.Data.SqlClient;
-using System.Linq;
-using System.Threading.Tasks;
 using itsppisapi.Dtos;
+using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace itsppisapi.Data
 {
@@ -70,7 +67,7 @@ namespace itsppisapi.Data
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@IN_TDATE", value.TDATE));
-                    cmd.Parameters.Add(new SqlParameter("@IN_E3_DMY_FLG", "D"));                               
+                    cmd.Parameters.Add(new SqlParameter("@IN_E3_DMY_FLG", "D"));
                     cmd.Parameters.Add(new SqlParameter("@IN_E3_GAS_TURBINE_GEN_INT", value.E3_GAS_TURBINE_GEN_INT));
                     cmd.Parameters.Add(new SqlParameter("@IN_E3_GAS_TURBINE_GEN_INT_DIFF", value.E3_GAS_TURBINE_GEN_INT_DIFF));
                     cmd.Parameters.Add(new SqlParameter("@IN_E3_TOT_GEN", value.E3_TOT_GEN));
@@ -424,7 +421,7 @@ namespace itsppisapi.Data
 
                 // Previous Day Fields
                 PRV_E3_GAS_TURBINE_GEN_INT = (decimal)reader["PRV_E3_GAS_TURBINE_GEN_INT"],
-              
+
                 PRV_E3_RECEIPT_FROM_JVVNL_GRID_INT = (decimal)reader["PRV_E3_RECEIPT_FROM_JVVNL_GRID_INT"],
                 PRV_E3_11_KV_BUS_A_TO_ISBL_INT = (decimal)reader["PRV_E3_11_KV_BUS_A_TO_ISBL_INT"],
                 PRV_E3_11_KV_BUS_B_TO_ISBL_INT = (decimal)reader["PRV_E3_11_KV_BUS_B_TO_ISBL_INT"],
@@ -432,12 +429,12 @@ namespace itsppisapi.Data
                 PRV_E3_CT_FEEDER_2_INT = (decimal)reader["PRV_E3_CT_FEEDER_2_INT"],
                 PRV_E3_11_KV_SUPPLY_TO_UPH_1_INT = (decimal)reader["PRV_E3_11_KV_SUPPLY_TO_UPH_1_INT"],
                 PRV_E3_11_KV_SUPPLY_TO_UPH_2_INT = (decimal)reader["PRV_E3_11_KV_SUPPLY_TO_UPH_2_INT"],
-              
+
                 PRV_E3_11_KV_SUPPLY_TO_UPH_3_FEEDER_1_INT = (decimal)reader["PRV_E3_11_KV_SUPPLY_TO_UPH_3_FEEDER_1_INT"],
                 PRV_E3_11_KV_SUPPLY_TO_UPH_3_FEEDER_2_INT = (decimal)reader["PRV_E3_11_KV_SUPPLY_TO_UPH_3_FEEDER_2_INT"],
                 PRV_E3_11_KV_SUPPLY_TO_ROZLD_FEEDER_1_INT = (decimal)reader["PRV_E3_11_KV_SUPPLY_TO_ROZLD_FEEDER_1_INT"],
                 PRV_E3_11_KV_SUPPLY_TO_ROZLD_FEEDER_2_INT = (decimal)reader["PRV_E3_11_KV_SUPPLY_TO_ROZLD_FEEDER_2_INT"],
-              
+
                 PRV_E3_AMM_415_V_PMCC_1_INT = (decimal)reader["PRV_E3_AMM_415_V_PMCC_1_INT"],
                 PRV_E3_AMM_415_V_PMCC_2_INT = (decimal)reader["PRV_E3_AMM_415_V_PMCC_2_INT"],
                 PRV_E3_UR_TA_PMCC_FEEDER_1_INT = (decimal)reader["PRV_E3_UR_TA_PMCC_FEEDER_1_INT"],
@@ -451,12 +448,12 @@ namespace itsppisapi.Data
                 PRV_E3_UPS_FEEDER_2_INT = (decimal)reader["PRV_E3_UPS_FEEDER_2_INT"],
                 PRV_E3_HVAC_INT = (decimal)reader["PRV_E3_HVAC_INT"],
                 PRV_E3_CCR_HVAC_INT = (decimal)reader["PRV_E3_CCR_HVAC_INT"],
-              
+
                 PRV_E3_11_KV_SUPPLY_TO_MP_7801C_INT = (decimal)reader["PRV_E3_11_KV_SUPPLY_TO_MP_7801C_INT"],
                 PRV_E3_11_KV_SUPPLY_TO_MP_7808C_INT = (decimal)reader["PRV_E3_11_KV_SUPPLY_TO_MP_7808C_INT"],
                 PRV_E3_SUPPLY_TO_415V_TRANSFMR_1_INT = (decimal)reader["PRV_E3_SUPPLY_TO_415V_TRANSFMR_1_INT"],
                 PRV_E3_SUPPLY_TO_415V_TRANSFMR_2_INT = (decimal)reader["PRV_E3_SUPPLY_TO_415V_TRANSFMR_2_INT"],
-              
+
                 PRV_E3_3_3_KV_SUPPLY_TO_MP_7601B_INT = (decimal)reader["PRV_E3_3_3_KV_SUPPLY_TO_MP_7601B_INT"],
                 PRV_E3_3_3_KV_SUPPLY_TO_MP_7811A_INT = (decimal)reader["PRV_E3_3_3_KV_SUPPLY_TO_MP_7811A_INT"],
                 PRV_E3_3_3_KV_SUPPLY_TO_MP_7811B_INT = (decimal)reader["PRV_E3_3_3_KV_SUPPLY_TO_MP_7811B_INT"],
@@ -468,7 +465,7 @@ namespace itsppisapi.Data
                 PRV_E3_FROM_UNIT_1_2_TO_HRSG_FAN_INT = (decimal)reader["PRV_E3_FROM_UNIT_1_2_TO_HRSG_FAN_INT"],
                 PRV_E3_ONU_SUPPLY_TO_415V_TRANSMR_1_INT = (decimal)reader["PRV_E3_ONU_SUPPLY_TO_415V_TRANSMR_1_INT"],
                 PRV_E3_ONU_SUPPLY_TO_415V_TRANSMR_2_INT = (decimal)reader["PRV_E3_ONU_SUPPLY_TO_415V_TRANSMR_2_INT"],
-              
+
                 PRV_E3_TO_MAIN_AIR_COMP_INT = (decimal)reader["PRV_E3_TO_MAIN_AIR_COMP_INT"],
                 PRV_E3_UTIL_SUPPLY_TO_415V_TRANSMR_1_INT = (decimal)reader["PRV_E3_UTIL_SUPPLY_TO_415V_TRANSMR_1_INT"],
                 PRV_E3_UTIL_SUPPLY_TO_415V_TRANSMR_2_INT = (decimal)reader["PRV_E3_UTIL_SUPPLY_TO_415V_TRANSMR_2_INT"],

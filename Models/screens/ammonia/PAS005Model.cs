@@ -11,7 +11,7 @@ namespace itsppisapi.Models
         public decimal A1_USER_ID { get; set; }
         public string USER_NAME { get; set; }
         public string A1_DATE_MOD { get; set; }
-        
+
         public decimal A1_AMM_BUDG_SP_GAS_1 { get; set; }
         public decimal A1_AMM_ACTL_SP_GAS_1 { get; set; }
         public decimal A1_AMM_CONSP_VAR_1 { get; set; }

@@ -1,8 +1,8 @@
-using Microsoft.Extensions.Configuration;
+using itsppisapi.Dtos;
 using itsppisapi.Models;
 using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
 using System.Threading.Tasks;
-using itsppisapi.Dtos;
 
 namespace itsppisapi.Data
 {
@@ -205,7 +205,7 @@ namespace itsppisapi.Data
                     cmd.Parameters.Add(new SqlParameter("@IN_A2_ATC_PROD", value.A2_ATC_PROD));
                     cmd.Parameters.Add(new SqlParameter("@IN_A2_ACTTC_PROD_INT", value.A2_ACTTC_PROD_INT));
                     cmd.Parameters.Add(new SqlParameter("@IN_A2_ACTTC_PROD", value.A2_ACTTC_PROD));
-                   // cmd.Parameters.Add(new SqlParameter("@IN_A2_REMARKS", value.A2_REMARKS));
+                    // cmd.Parameters.Add(new SqlParameter("@IN_A2_REMARKS", value.A2_REMARKS));
                     cmd.Parameters.Add(new SqlParameter("@IN_A2_PW_CONSP_AB_INT_DIFF", value.A2_PW_CONSP_AB_INT_DIFF));
                     cmd.Parameters.Add(new SqlParameter("@IN_A2_PW_CONSP_DESUP1_INT", value.A2_PW_CONSP_DESUP1_INT));
                     cmd.Parameters.Add(new SqlParameter("@IN_A2_PW_CONSP_DESUP1_INT_DIFF", value.A2_PW_CONSP_DESUP1_INT_DIFF));

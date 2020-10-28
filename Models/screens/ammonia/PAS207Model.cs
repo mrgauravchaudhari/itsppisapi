@@ -127,6 +127,6 @@ namespace itsppisapi.Models
         public dynamic PARM_CF_PW_AB { get; set; }
         public dynamic parm_proj_start_date { get; set; }
         public dynamic ln_op_stk { get; set; }
-       // public dynamic parm_urea2_tot_prod { get; set; }// repeated field //
+        // public dynamic parm_urea2_tot_prod { get; set; }// repeated field //
     }
 }

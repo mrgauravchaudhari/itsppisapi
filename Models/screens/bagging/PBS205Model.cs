@@ -9,7 +9,7 @@ namespace itsppisapi.Models
         public decimal B_USER_ID { get; set; }
         public string B_USER_NAME { get; set; }
         public string B_DATE_MOD { get; set; }
-        
+
         public string B_RAKE_NO { get; set; }
         public string B_RAKE_DESTINATION { get; set; }
         public string B_PLACEMENT_DATE { get; set; }

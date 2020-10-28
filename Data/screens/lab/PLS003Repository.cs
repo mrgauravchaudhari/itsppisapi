@@ -1,11 +1,8 @@
-using Microsoft.Extensions.Configuration;
 using itsppisapi.Models;
-using System;
-using System.Collections.Generic;
 using Microsoft.Data.SqlClient;
-using System.Linq;
+using Microsoft.Extensions.Configuration;
+using System.Collections.Generic;
 using System.Threading.Tasks;
-using itsppisapi.Dtos;
 
 namespace itsppisapi.Data
 {
@@ -42,7 +39,7 @@ namespace itsppisapi.Data
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@IN_DATE", IN_DATE));
-                    cmd.Parameters.Add(new SqlParameter("@IN_BTN",IN_BTN));
+                    cmd.Parameters.Add(new SqlParameter("@IN_BTN", IN_BTN));
                     var response = new List<PLS003Model>();
                     await sql.OpenAsync();
                     using (var reader = await cmd.ExecuteReaderAsync())

@@ -1,12 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
 
 namespace itsppisapi
 {
@@ -20,7 +13,7 @@ namespace itsppisapi
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
             .UseStartup<Startup>().UseUrls("http://localhost:8085");
-            // .UseStartup<Startup>().UseUrls("http://win-server:8085");
-            // .UseStartup<Startup>().UseUrls("http://192.168.201.27:8085");
+        // .UseStartup<Startup>().UseUrls("http://win-server:8085");
+        // .UseStartup<Startup>().UseUrls("http://192.168.201.27:8085");
     }
 }

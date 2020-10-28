@@ -1,11 +1,10 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.Data;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Data.SqlClient;
-using Microsoft.AspNetCore.Authorization;
-using System.Threading;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Data;
+using System.Threading.Tasks;
 
 namespace cfclapi.Controllers.ledgers.electrical
 {
@@ -28,7 +27,7 @@ namespace cfclapi.Controllers.ledgers.electrical
         {
             try
             {
-               string strqry = "PPIS.PPU_U3_MR_PROD_CONS_PUR306";
+                string strqry = "PPIS.PPU_U3_MR_PROD_CONS_PUR306";
 
                 _connectionString = _context.Database.GetDbConnection().ConnectionString.ToString();
 
@@ -39,11 +38,11 @@ namespace cfclapi.Controllers.ledgers.electrical
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.Add(new SqlParameter("@PARM_DATE", month));
                         await sql.OpenAsync();
-                       
+
                         SqlDataAdapter da = new SqlDataAdapter(cmd);
                         DataSet ds = new DataSet();
                         da.Fill(ds);
-                        
+
                         return ds;
                     }
                 }

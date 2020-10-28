@@ -1,9 +1,8 @@
-using Microsoft.Extensions.Configuration;
 using itsppisapi.Models;
 using Microsoft.Data.SqlClient;
-using System.Threading.Tasks;
-using itsppisapi.Dtos;
+using Microsoft.Extensions.Configuration;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace itsppisapi.Data
 {
@@ -36,7 +35,7 @@ namespace itsppisapi.Data
             };
         }
 
-        public async Task<List<PBS203Model>> put2(string IN_DATE,char IN_BTN)
+        public async Task<List<PBS203Model>> put2(string IN_DATE, char IN_BTN)
         {
             using (SqlConnection sql = new SqlConnection(_connectionString))
             {

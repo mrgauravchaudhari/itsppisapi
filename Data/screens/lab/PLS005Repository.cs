@@ -1,9 +1,9 @@
-using Microsoft.Extensions.Configuration;
-using itsppisapi.Models;
-using System.Collections.Generic;
-using Microsoft.Data.SqlClient;
-using System.Threading.Tasks;
 using itsppisapi.Dtos;
+using itsppisapi.Models;
+using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace itsppisapi.Data
 {
@@ -28,7 +28,7 @@ namespace itsppisapi.Data
                 L_UNIT_ID = reader["L_UNIT_ID"].ToString(),
                 L_USER_ID = (decimal)reader["L_USER_ID"],
                 L_DATE_MOD = reader["L_DATE_MOD"].ToString(),
-               
+
                 L_N2 = (decimal)reader["L_N2"],
                 L_CH4 = (decimal)reader["L_CH4"],
                 L_C2H6 = (decimal)reader["L_C2H6"],

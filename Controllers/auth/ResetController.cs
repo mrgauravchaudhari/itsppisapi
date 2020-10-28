@@ -1,9 +1,8 @@
-using System;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using itsppisapi.Data;
 using itsppisapi.Dtos;
-using itsppisapi.Models;
+using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Threading.Tasks;
 
 namespace itsppisapi.Controllers
 {
@@ -17,7 +16,7 @@ namespace itsppisapi.Controllers
         {
             this._repository = repository ?? throw new ArgumentNullException(nameof(repository));
         }
-        
+
         [HttpPut]
         public async Task<ActionResult<Object>> Put(StringParameterDto data)
         {

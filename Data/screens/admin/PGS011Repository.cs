@@ -1,11 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using itsppisapi.Dtos;
 using itsppisapi.Models;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace itsppisapi.Data
 {
@@ -87,7 +85,7 @@ namespace itsppisapi.Data
                 }
             }
         }
-       
+
         public async Task saveData(PGS011SaveDto data)
         {
             using (SqlConnection sql = new SqlConnection(_connectionString))

@@ -1,10 +1,10 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.Data;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Data.SqlClient;
-using Microsoft.AspNetCore.Authorization;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Data;
+using System.Threading.Tasks;
 
 namespace cfclapi.Controllers.ledgers.electrical
 {
@@ -23,11 +23,11 @@ namespace cfclapi.Controllers.ledgers.electrical
         }
 
         [HttpGet("{fromdate}/{todate}")]
-        public async Task<DataSet> get(string fromdate,string todate)
+        public async Task<DataSet> get(string fromdate, string todate)
         {
             try
             {
-               string strqry = "[PPIS].PPU_P_BG2_DR_UPH_Status_PBR235";
+                string strqry = "[PPIS].PPU_P_BG2_DR_UPH_Status_PBR235";
 
                 _connectionString = _context.Database.GetDbConnection().ConnectionString.ToString();
 

@@ -1,11 +1,11 @@
-using System;
-using System.Threading.Tasks;
-using itsppisapi.Models;
-using Microsoft.AspNetCore.Mvc;
 using itsppisapi.Data;
 using itsppisapi.Dtos;
-using System.Collections.Generic;
+using itsppisapi.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace itsppisapi.Controllers
 {
@@ -32,7 +32,7 @@ namespace itsppisapi.Controllers
         {
             return await _repository.putData(data);
         }
-        
+
         [HttpPost]
         public async Task Post(BagDailyDltsSaveDto data)
         {

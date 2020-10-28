@@ -1,8 +1,8 @@
-using Microsoft.Extensions.Configuration;
-using itsppisapi.Models;
 using itsppisapi.Dtos;
-using System.Collections.Generic;
+using itsppisapi.Models;
 using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace itsppisapi.Data

@@ -1,5 +1,3 @@
-using System.ComponentModel.DataAnnotations;
-
 namespace itsppisapi.Dtos
 {
     public class UserForRegisterDto

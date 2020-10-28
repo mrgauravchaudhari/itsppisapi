@@ -1,9 +1,9 @@
-using Microsoft.Extensions.Configuration;
 using itsppisapi.Dtos;
 using itsppisapi.Models;
 using Microsoft.Data.SqlClient;
-using System.Threading.Tasks;
+using Microsoft.Extensions.Configuration;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace itsppisapi.Data
 {
@@ -23,7 +23,7 @@ namespace itsppisapi.Data
                 MAXDT = reader["MAXDT"].ToString(),
                 B_TRANS_DATE = reader["B_TRANS_DATE"].ToString(),
                 B_UNIT_ID = reader["B_UNIT_ID"].ToString(),
-                
+
                 B_BAGG_QTY_PF1 = (decimal)reader["B_BAGG_QTY_PF1"],
                 B_BAGG_QTY_PF2 = (decimal)reader["B_BAGG_QTY_PF2"],
                 B_BAGG_QTY = (decimal)reader["B_BAGG_QTY"],
@@ -49,7 +49,7 @@ namespace itsppisapi.Data
                 B_BAG_TYPE_ID = (decimal)reader["B_BAG_TYPE_ID"],
                 TXT_BAG_TYPE = reader["TXT_BAG_TYPE"].ToString(),
                 TXT_BAG_SIZE = (decimal)reader["TXT_BAG_SIZE"],
-                
+
                 TXT_UREA_PROD = (decimal)reader["TXT_UREA_PROD"],
                 parm_empty_bag_stk = (decimal)reader["parm_empty_bag_stk"],
                 parm_bag_stock = (decimal)reader["parm_bag_stock"],
@@ -111,11 +111,11 @@ namespace itsppisapi.Data
                 }
             }
         }
-        
+
         public async Task saveData(BagDailyDltsSaveDto value)
         {
             using (SqlConnection sql = new SqlConnection(_connectionString))
-            {                                               
+            {
                 using (SqlCommand cmd = new SqlCommand("PPIS.PPU_P_BG2_SAVE_PPT_BG_BAG_DAILY_DETAILS", sql))
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;

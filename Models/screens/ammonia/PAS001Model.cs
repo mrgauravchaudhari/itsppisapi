@@ -458,7 +458,7 @@ namespace itsppisapi.Models
         public dynamic PRV_A1_SPOT_GAIL_MMBTU { get; set; }
         public dynamic PRV_A1_SPOT_GAIL_ALLOC { get; set; }
         public dynamic PRV_A1_SPOT_GAIL_RECEIPT { get; set; }
-        
+
         public dynamic PRV_A1_KS_STEAM_INT { get; set; }
 
     }

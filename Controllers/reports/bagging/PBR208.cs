@@ -1,10 +1,10 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.Data;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Data.SqlClient;
-using Microsoft.AspNetCore.Authorization;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Data;
+using System.Threading.Tasks;
 
 namespace cfclapi.Controllers.ledgers.electrical
 {
@@ -23,11 +23,11 @@ namespace cfclapi.Controllers.ledgers.electrical
         }
 
         [HttpGet("{month}/{unit_id}")]
-        public async Task<DataSet> get(string month,string unit_id)
+        public async Task<DataSet> get(string month, string unit_id)
         {
             try
             {
-               string strqry = "[PPIS].[PPU_P_BG_MR_RACK_PLACEMENT_PBR208]";
+                string strqry = "[PPIS].[PPU_P_BG_MR_RACK_PLACEMENT_PBR208]";
 
                 _connectionString = _context.Database.GetDbConnection().ConnectionString.ToString();
 

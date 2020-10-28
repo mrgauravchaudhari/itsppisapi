@@ -1,8 +1,8 @@
-using Microsoft.Extensions.Configuration;
-using Microsoft.Data.SqlClient;
-using System.Threading.Tasks;
 using itsppisapi.Models;
 using itsppisapi.SaveDtos;
+using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
+using System.Threading.Tasks;
 
 namespace itsppisapi.Data
 {
@@ -159,8 +159,8 @@ namespace itsppisapi.Data
                 M_REMARK_UNIT2 = reader["M_REMARK_UNIT2"].ToString(),
                 M_REMARK_SSP = reader["M_REMARK_SSP"].ToString(),
                 M_C_REMARKS = reader["M_C_REMARKS"].ToString(),
-                M_C_REMARKS_UNIT2 = reader["M_C_REMARKS_UNIT2"].ToString(),   
-               
+                M_C_REMARKS_UNIT2 = reader["M_C_REMARKS_UNIT2"].ToString(),
+
             };
         }
 

@@ -1,6 +1,3 @@
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-
 namespace itsppisapi.Models
 {
     public class PGS010Model
@@ -15,7 +12,6 @@ namespace itsppisapi.Models
         public string USER_EMAIL { get; set; }
         public string ACTIVE_FLAG { get; set; }
         public string USER_VALIDITY_DT { get; set; }
-        public string USER_INACTIVE_DT { get; set; }
         public decimal ENTERED_BY { get; set; }
         public decimal MODIFIED_BY { get; set; }
         public byte[] PASSWORD_HASH { get; set; }

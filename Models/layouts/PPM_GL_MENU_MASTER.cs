@@ -7,7 +7,7 @@ namespace itsppisapi.Models
         public string MODULE_NAME { get; set; }
         public string MODULE_DESC { get; set; }
         public string MODULE_URL { get; set; }
-        public string PARENT_MODULE_NAME { get; set; }	
-    
+        public string PARENT_MODULE_NAME { get; set; }
+
     }
 }

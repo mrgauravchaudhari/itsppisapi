@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.Data.SqlClient;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
+using System;
 using System.Data;
-using Microsoft.AspNetCore.Authorization;
+using System.Threading.Tasks;
 
 namespace itsppisapi.Controllers.global
 {
@@ -41,7 +38,7 @@ namespace itsppisapi.Controllers.global
                         DataSet ds = new DataSet();
                         DataSet ds1 = new DataSet();
                         DataSet ds2 = new DataSet();
-                        da.Fill(ds);                        
+                        da.Fill(ds);
 
                         return ds;
                     }

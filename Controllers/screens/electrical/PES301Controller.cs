@@ -1,15 +1,10 @@
+using itsppisapi.Data;
+using itsppisapi.Dtos;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using itsppisapi.Data;
-using itsppisapi.Models;
-using System.Net.Http;
-using System.Net;
-using Microsoft.AspNetCore.Authorization;
-using itsppisapi.Dtos;
 
 namespace itsppisapi.Controllers
 {

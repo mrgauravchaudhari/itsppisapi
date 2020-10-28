@@ -1,6 +1,3 @@
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-
 namespace itsppisapi.Models
 {
     public class PGS013Model
@@ -16,7 +13,7 @@ namespace itsppisapi.Models
         public string ACCESS_FLAG { get; set; }
         public string GROUP_MODULES { get; set; }
     }
-     public class ListModuleModel
+    public class ListModuleModel
     {
         public decimal MODULE_ID { get; set; }
         public string MODULE_NAME { get; set; }

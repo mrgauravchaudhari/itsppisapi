@@ -1,5 +1,7 @@
-namespace itsppisapi.Models {
-    public class PAS003Model {
+namespace itsppisapi.Models
+{
+    public class PAS003Model
+    {
         public string MINMONTH { get; set; }
         public decimal MINYEAR { get; set; }
         public string MAXMONTH { get; set; }

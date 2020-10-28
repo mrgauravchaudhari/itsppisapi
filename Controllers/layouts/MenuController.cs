@@ -1,12 +1,12 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using itsppisapi.Data;
 using itsppisapi.Dtos;
 using itsppisapi.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace itsppisapi.Controllers
 {
@@ -42,7 +42,7 @@ namespace itsppisapi.Controllers
             if (menuData != null && menuData.Count() > 1)
             {
                 _menuParentNodesData = menuData.Where(menu => menu.PARENT_MODULE_NAME == "PARENT");
-                
+
                 foreach (var menuItem in _menuParentNodesData)
                 {
                     buildTreeviewMenu(menuItem, menuData);
@@ -58,7 +58,7 @@ namespace itsppisapi.Controllers
             IEnumerable<PPV_TREEMENU> _menuItems;
 
             _menuItems = menudata.Where(menu => menu.PARENT_MODULE_NAME == menuItem.MODULE_NAME);
-            
+
             if (_menuItems != null && _menuItems.Count() > 0)
             {
                 foreach (var item in _menuItems)

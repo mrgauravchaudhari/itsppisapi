@@ -13,7 +13,7 @@ namespace itsppisapi.SaveDtos
         public string OU_MACH_ACTIVE_FLAG { get; set; }
     }
 
-    public class  ChemicalMasterSaveDto
+    public class ChemicalMasterSaveDto
     {
         public string OU_CHEMICAL_ID { get; set; }
         public string OU_MEAS_UNIT { get; set; }

@@ -1,9 +1,3 @@
-using System;
-using System.Collections.Generic;
-using Microsoft.Data.SqlClient;
-using System.Linq;
-using System.Threading.Tasks;
-
 namespace itsppisapi.Models
 {
     public class PLS008Model
@@ -13,7 +7,7 @@ namespace itsppisapi.Models
         public string L_TRANS_DATE { get; set; }
         public string DSP_L_REPORT_NAME { get; set; }
         public string L_TIME { get; set; }
-        public string L_SHIFT_NO { get; set; }     
+        public string L_SHIFT_NO { get; set; }
 
     }
 }

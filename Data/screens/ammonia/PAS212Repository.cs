@@ -1,6 +1,6 @@
-using Microsoft.Extensions.Configuration;
 using itsppisapi.Models;
 using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
 using System.Threading.Tasks;
 
 namespace itsppisapi.Data
@@ -110,7 +110,7 @@ namespace itsppisapi.Data
             };
         }
 
-        public async Task<PAS212Model> putData(string IN_DATE,char IN_BTN)
+        public async Task<PAS212Model> putData(string IN_DATE, char IN_BTN)
         {
             using (SqlConnection sql = new SqlConnection(_connectionString))
             {

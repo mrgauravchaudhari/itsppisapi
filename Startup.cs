@@ -1,5 +1,3 @@
-using System.Net;
-using System.Text;
 using itsppisapi.Data;
 using itsppisapi.Helpers;
 using itsppisapi.Models;
@@ -14,6 +12,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json.Serialization;
+using System.Net;
+using System.Text;
 
 namespace itsppisapi
 {

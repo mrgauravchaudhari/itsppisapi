@@ -1,8 +1,8 @@
-using Microsoft.Extensions.Configuration;
+using itsppisapi.Dtos;
 using itsppisapi.Models;
 using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
 using System.Threading.Tasks;
-using itsppisapi.Dtos;
 
 namespace itsppisapi.Data
 {
@@ -233,7 +233,7 @@ namespace itsppisapi.Data
                 PRV_OU_LS_EXPORTT_UNIT2_INT = (decimal)reader["PRV_OU_LS_EXPORTT_UNIT2_INT"],
                 PRV_OU_LS_CONSP_VENTING = (decimal)reader["PRV_OU_LS_CONSP_VENTING"],
                 PRV_OU_LS_IMPORTF_UNIT2_INT = (decimal)reader["PRV_OU_LS_IMPORTF_UNIT2_INT"],
-                
+
                 // --------------------DV-----------------------------
                 OU3_KS_STEAM_SUPPLY_GP1_2 = (decimal)reader["OU3_KS_STEAM_SUPPLY_GP1_2"],
                 parm_aval_prs_hpbfw = (decimal)reader["parm_aval_prs_hpbfw"],
