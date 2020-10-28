@@ -37,6 +37,7 @@ namespace itsppisapi.Data
                 USER_EMAIL = reader["USER_EMAIL"].ToString(),
                 ACTIVE_FLAG = reader["ACTIVE_FLAG"].ToString(),
                 USER_VALIDITY_DT = reader["USER_VALIDITY_DT"].ToString(),
+                USER_INACTIVE_DT = reader["USER_INACTIVE_DT"].ToString(),
                 ENTERED_BY = (decimal)reader["ENTERED_BY"],
                 MODIFIED_BY = (decimal)reader["MODIFIED_BY"],
             };

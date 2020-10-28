@@ -88,11 +88,6 @@ namespace itsppisapi.Controllers
             if (userFromRepository == null)
                 return Unauthorized();
 
-            var ValidityStatus = await _repository.UserValidityStatus(userForLoginDto.USER_NAME);
-
-            if (ValidityStatus == true)
-                return BadRequest("Validity Pass.");
-
             var claims = new[] {
                 new Claim (ClaimTypes.NameIdentifier, userFromRepository.USER_ID.ToString ()),
                 new Claim (ClaimTypes.Name, userFromRepository.USER_NAME)

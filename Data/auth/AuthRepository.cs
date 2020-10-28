@@ -119,16 +119,16 @@ namespace itsppisapi.Data
             USER_NAME = USER_NAME.ToLower();
             if (await _context.PPM_GL_MST_USERS.AnyAsync(x => x.USER_NAME == USER_NAME))
                 return true;
-
-            return false;
+            else
+                return false;
         }
 
         public async Task<bool> UserEPRNOExists(decimal USER_EPR_NO)
         {
             if (await _context.PPM_GL_MST_USERS.AnyAsync(x => x.USER_EPR_NO == USER_EPR_NO))
                 return true;
-
-            return false;
+            else
+                return false;
         }
 
         public async Task<bool> UserResetStatus(string USER_NAME)
@@ -136,34 +136,8 @@ namespace itsppisapi.Data
             USER_NAME = USER_NAME.ToLower();
             if (await _context.PPM_GL_MST_USERS.AnyAsync(x => x.USER_NAME == USER_NAME && x.PASSWORD_FLAG == "OTP"))
                 return true;
-
-            return false;
-        }
-
-        public async Task<bool> UserValidityStatus(string USER_NAME)
-        {
-            USER_NAME = USER_NAME.ToLower();
-            if (await _context.PPM_GL_MST_USERS.AnyAsync(x => x.USER_NAME == USER_NAME && x.USER_VALIDITY_DT != null))
-            {
-                if (await _context.PPM_GL_MST_USERS.AnyAsync(y => y.USER_NAME == USER_NAME && y.USER_VALIDITY_DT.ToString("yyyy-MM-dd") == DateTime.Now.ToString("yyyy-MM-dd")))
-                    return true;
-
-                return false;
-            }
             else
-            {
                 return false;
-            }
         }
-
-        //public async Task<UserProfile> Profile(string USER_NAME)
-        //{
-        //  var User = await _context.UserProfile.FirstOrDefaultAsync(x => x.USER_NAME == USER_NAME);
-
-        //  if (User == null)
-        //    return null;
-
-        //  return User;
-        //}
     }
 }

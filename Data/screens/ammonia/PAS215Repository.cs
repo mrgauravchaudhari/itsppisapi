@@ -37,20 +37,6 @@ namespace itsppisapi.Data
                 A2_DATE_MOD = reader["A2_DATE_MOD"].ToString(),
                 A2_USER_ID = (dynamic)reader["A2_USER_ID"],
                 USER_NAME = reader["USER_NAME"].ToString(),
-
-                // PRV
-                PRV_A2_TRANS_DATE = reader["PRV_A2_TRANS_DATE"].ToString(),
-                PRV_DSP_DEPT_NAME = reader["PRV_DSP_DEPT_NAME"].ToString(),
-                PRV_DSP_MAINT_DEPT_DESC = reader["PRV_DSP_MAINT_DEPT_DESC"].ToString(),
-                PRV_A2_TAG_NO = reader["PRV_A2_TAG_NO"].ToString(),
-                PRV_A2_DATE_TIME_FROM = reader["PRV_A2_DATE_TIME_FROM"].ToString(),
-                PRV_A2_DATE_TIME_TO = reader["PRV_A2_DATE_TIME_TO"].ToString(),
-                PRV_A2_MAINT_HRS = (dynamic)reader["PRV_A2_MAINT_HRS"],
-                PRV_A2_MAINT_TYPE = (dynamic)reader["PRV_A2_MAINT_TYPE"],
-                PRV_A2_DOWNTIME_HRS = (dynamic)reader["PRV_A2_DOWNTIME_HRS"],
-                PRV_A2_JOB_DESC = reader["PRV_A2_JOB_DESC"].ToString(),
-                PRV_A2_MONTH_FLG = reader["PRV_A2_MONTH_FLG"].ToString(),
-                PRV_A2_YEAR_FLG = reader["PRV_A2_YEAR_FLG"].ToString()
             };
         }
 
