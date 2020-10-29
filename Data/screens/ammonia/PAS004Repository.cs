@@ -82,8 +82,8 @@ namespace itsppisapi.Data
                 using (SqlCommand cmd = new SqlCommand("PPIS.PPU_P_CALC_AMM_VARIANCE", sql))
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@IN_MONTH", MONTH));
-                    cmd.Parameters.Add(new SqlParameter("@IN_YEAR", YEAR));
+                    cmd.Parameters.Add(new SqlParameter("@MONTH", MONTH));
+                    cmd.Parameters.Add(new SqlParameter("@YEAR", YEAR));
                     cmd.Parameters.Add(new SqlParameter("@DELETE_FLG", DELETE_FLG));
                     cmd.Parameters.Add(new SqlParameter("@USER_ID", USER_ID));
                     PAS004Model2 response = null;

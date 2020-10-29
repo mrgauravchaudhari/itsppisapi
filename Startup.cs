@@ -151,6 +151,7 @@ namespace itsppisapi
             services.AddScoped<PBS007Repository>();
             services.AddScoped<PBS008Repository>();
             services.AddScoped<PBS011Repository>();
+            services.AddScoped<PBS015Repository>();
             services.AddScoped<PBS202Repository>();
             services.AddScoped<PBS203Repository>();
             services.AddScoped<PBS204Repository>();
